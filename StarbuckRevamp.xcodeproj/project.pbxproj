@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BACA05FA2AEA501B0029076D /* shopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05F92AEA501B0029076D /* shopModel.swift */; };
 		BAF1A8492AE902F1005C3240 /* StarbuckRevampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8482AE902F1005C3240 /* StarbuckRevampApp.swift */; };
 		BAF1A8832AE90505005C3240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8822AE90505005C3240 /* Assets.xcassets */; };
 		BAF1A8862AE90567005C3240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8852AE90567005C3240 /* Preview Assets.xcassets */; };
@@ -16,9 +17,22 @@
 		BAF1A8942AE90644005C3240 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8932AE90644005C3240 /* NavBar.swift */; };
 		BAF1A8962AE90672005C3240 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8952AE90672005C3240 /* Colors.swift */; };
 		BAF1A8982AE9F56F005C3240 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8972AE9F56F005C3240 /* Icons.swift */; };
+		BAF1A8A02AEA077A005C3240 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A89B2AEA077A005C3240 /* WorkSans-Regular.ttf */; };
+		BAF1A8A12AEA077A005C3240 /* WorkSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A89C2AEA077A005C3240 /* WorkSans-Light.ttf */; };
+		BAF1A8A22AEA077A005C3240 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A89D2AEA077A005C3240 /* WorkSans-Medium.ttf */; };
+		BAF1A8A32AEA077A005C3240 /* WorkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A89E2AEA077A005C3240 /* WorkSans-SemiBold.ttf */; };
+		BAF1A8A42AEA077A005C3240 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A89F2AEA077A005C3240 /* WorkSans-Bold.ttf */; };
+		BAF1A8AD2AEA1299005C3240 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8A72AEA1299005C3240 /* Nunito-Medium.ttf */; };
+		BAF1A8AE2AEA1299005C3240 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8A82AEA1299005C3240 /* Nunito-ExtraBold.ttf */; };
+		BAF1A8AF2AEA1299005C3240 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8A92AEA1299005C3240 /* Nunito-Light.ttf */; };
+		BAF1A8B02AEA1299005C3240 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8AA2AEA1299005C3240 /* Nunito-Regular.ttf */; };
+		BAF1A8B12AEA1299005C3240 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8AB2AEA1299005C3240 /* Nunito-SemiBold.ttf */; };
+		BAF1A8B22AEA1299005C3240 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8AC2AEA1299005C3240 /* Nunito-Bold.ttf */; };
+		BAF1A8B52AEA26AA005C3240 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8B42AEA26AA005C3240 /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BACA05F92AEA501B0029076D /* shopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopModel.swift; sourceTree = "<group>"; };
 		BAF1A8452AE902F1005C3240 /* StarbuckRevamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbuckRevamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF1A8482AE902F1005C3240 /* StarbuckRevampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbuckRevampApp.swift; sourceTree = "<group>"; };
 		BAF1A8822AE90505005C3240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,6 +43,19 @@
 		BAF1A8932AE90644005C3240 /* NavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		BAF1A8952AE90672005C3240 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BAF1A8972AE9F56F005C3240 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		BAF1A89B2AEA077A005C3240 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		BAF1A89C2AEA077A005C3240 /* WorkSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Light.ttf"; sourceTree = "<group>"; };
+		BAF1A89D2AEA077A005C3240 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		BAF1A89E2AEA077A005C3240 /* WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		BAF1A89F2AEA077A005C3240 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		BAF1A8A52AEA07BD005C3240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BAF1A8A72AEA1299005C3240 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		BAF1A8A82AEA1299005C3240 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		BAF1A8A92AEA1299005C3240 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		BAF1A8AA2AEA1299005C3240 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		BAF1A8AB2AEA1299005C3240 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		BAF1A8AC2AEA1299005C3240 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		BAF1A8B42AEA26AA005C3240 /* ProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +88,14 @@
 		BAF1A8472AE902F1005C3240 /* StarbuckRevamp */ = {
 			isa = PBXGroup;
 			children = (
+				BAF1A8A52AEA07BD005C3240 /* Info.plist */,
 				BAF1A8792AE9045E005C3240 /* Commons */,
 				BAF1A8782AE9045E005C3240 /* Models */,
 				BAF1A87B2AE9045E005C3240 /* Repositories */,
-				BAF1A87C2AE9045E005C3240 /* Resources */,
 				BAF1A87D2AE9045E005C3240 /* Screens */,
 				BAF1A8812AE9045E005C3240 /* Utils */,
 				BAF1A8482AE902F1005C3240 /* StarbuckRevampApp.swift */,
-				BAF1A8822AE90505005C3240 /* Assets.xcassets */,
+				BAF1A87C2AE9045E005C3240 /* Resources */,
 				BAF1A8842AE90567005C3240 /* Preview Content */,
 			);
 			path = StarbuckRevamp;
@@ -77,6 +104,8 @@
 		BAF1A8782AE9045E005C3240 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BAF1A8B42AEA26AA005C3240 /* ProductModel.swift */,
+				BACA05F92AEA501B0029076D /* shopModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +137,8 @@
 		BAF1A87C2AE9045E005C3240 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BAF1A89A2AEA077A005C3240 /* Fonts */,
+				BAF1A8822AE90505005C3240 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -115,6 +146,7 @@
 		BAF1A87D2AE9045E005C3240 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BAF1A8B32AEA1516005C3240 /* Commons */,
 				BAF1A87E2AE9045E005C3240 /* Home */,
 				BAF1A87F2AE9045E005C3240 /* Common */,
 				BAF1A8802AE9045E005C3240 /* NavigationTab */,
@@ -160,6 +192,39 @@
 				BAF1A8852AE90567005C3240 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BAF1A89A2AEA077A005C3240 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1A8A62AEA1299005C3240 /* Nunito */,
+				BAF1A89B2AEA077A005C3240 /* WorkSans-Regular.ttf */,
+				BAF1A89C2AEA077A005C3240 /* WorkSans-Light.ttf */,
+				BAF1A89D2AEA077A005C3240 /* WorkSans-Medium.ttf */,
+				BAF1A89E2AEA077A005C3240 /* WorkSans-SemiBold.ttf */,
+				BAF1A89F2AEA077A005C3240 /* WorkSans-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BAF1A8A62AEA1299005C3240 /* Nunito */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1A8A72AEA1299005C3240 /* Nunito-Medium.ttf */,
+				BAF1A8A82AEA1299005C3240 /* Nunito-ExtraBold.ttf */,
+				BAF1A8A92AEA1299005C3240 /* Nunito-Light.ttf */,
+				BAF1A8AA2AEA1299005C3240 /* Nunito-Regular.ttf */,
+				BAF1A8AB2AEA1299005C3240 /* Nunito-SemiBold.ttf */,
+				BAF1A8AC2AEA1299005C3240 /* Nunito-Bold.ttf */,
+			);
+			path = Nunito;
+			sourceTree = "<group>";
+		};
+		BAF1A8B32AEA1516005C3240 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +285,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF1A8B12AEA1299005C3240 /* Nunito-SemiBold.ttf in Resources */,
+				BAF1A8B02AEA1299005C3240 /* Nunito-Regular.ttf in Resources */,
+				BAF1A8B22AEA1299005C3240 /* Nunito-Bold.ttf in Resources */,
+				BAF1A8AD2AEA1299005C3240 /* Nunito-Medium.ttf in Resources */,
+				BAF1A8A02AEA077A005C3240 /* WorkSans-Regular.ttf in Resources */,
 				BAF1A8862AE90567005C3240 /* Preview Assets.xcassets in Resources */,
+				BAF1A8AE2AEA1299005C3240 /* Nunito-ExtraBold.ttf in Resources */,
 				BAF1A8832AE90505005C3240 /* Assets.xcassets in Resources */,
+				BAF1A8A32AEA077A005C3240 /* WorkSans-SemiBold.ttf in Resources */,
+				BAF1A8AF2AEA1299005C3240 /* Nunito-Light.ttf in Resources */,
+				BAF1A8A22AEA077A005C3240 /* WorkSans-Medium.ttf in Resources */,
+				BAF1A8A12AEA077A005C3240 /* WorkSans-Light.ttf in Resources */,
+				BAF1A8A42AEA077A005C3240 /* WorkSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,10 +311,12 @@
 				BAF1A8982AE9F56F005C3240 /* Icons.swift in Sources */,
 				BAF1A8942AE90644005C3240 /* NavBar.swift in Sources */,
 				BAF1A8962AE90672005C3240 /* Colors.swift in Sources */,
+				BACA05FA2AEA501B0029076D /* shopModel.swift in Sources */,
 				BAF1A8902AE9062E005C3240 /* ViewExtension.swift in Sources */,
 				BAF1A8922AE9063C005C3240 /* HomeVC.swift in Sources */,
 				BAF1A88F2AE9062E005C3240 /* UIImageExtention.swift in Sources */,
 				BAF1A8492AE902F1005C3240 /* StarbuckRevampApp.swift in Sources */,
+				BAF1A8B52AEA26AA005C3240 /* ProductModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +453,7 @@
 				DEVELOPMENT_TEAM = JF5Q6HSWBK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarbuckRevamp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -404,6 +483,7 @@
 				DEVELOPMENT_TEAM = JF5Q6HSWBK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarbuckRevamp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

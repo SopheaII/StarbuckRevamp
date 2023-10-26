@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct NavBar: View {
+    
     @State private var selection = 0
     let image = UIImage.gradientImageWithBounds(
-        bounds: CGRect( x: 0, y: 0, width: UIScreen.main.scale, height: 13),
+        bounds: CGRect( x: 0, y: 0, width: UIScreen.main.scale, height: 10),
         colors: [
-            UIColor.clear.cgColor,
-            UIColor.black.withAlphaComponent(0.08).cgColor
+            UIColor.white.withAlphaComponent(1).cgColor
         ]
     )
     
@@ -72,7 +72,7 @@ struct NavBar: View {
                     Text("Account")
                 }.tag(4)
         }
-        .padding([.leading, .trailing], 10)
+//        .padding([.leading, .trailing], 10)
         .accentColor(Colors.mainColor.value)
     }
 }

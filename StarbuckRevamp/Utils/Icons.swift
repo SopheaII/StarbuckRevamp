@@ -18,6 +18,12 @@ enum Icons: String {
     case icHotCupSelected
     case icStarGray
     case icStarSelected
+    case icQR
+    case icStarGold
+    case icBellGray
+    case giftImage
+    case icHeardFill
+    case icHeard
     
     var value: String {
         return self.rawValue
