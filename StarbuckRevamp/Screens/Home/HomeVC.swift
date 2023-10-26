@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-//struct ProductModel {
-//    let name: String
-//    let icon: String
-//}
-
 struct HomeVC: View {
     let productData = [
         ProductModel(name: "Veranda blend", image: "coffee1", isFavorite: true),
@@ -24,7 +19,6 @@ struct HomeVC: View {
         ShopModel(street: "409th Gle #340", image: "coffeeShop1", shopTime: "7PM - 6AM", status: "Open now")
     ]
     
-    
     var body: some View {
         ZStack(alignment: .top, content: {
             Color.white.ignoresSafeArea()
@@ -32,7 +26,7 @@ struct HomeVC: View {
             
             VStack(alignment: .leading, spacing: 0, content: {
                 
-                /// Header
+                // MARK: Header
                 HStack(){
                     Text("Hi, Bob!")
                         .customFont(.NunitoExtraBold(size: 28))
@@ -55,7 +49,7 @@ struct HomeVC: View {
                 }
                 
                 ScrollView(.vertical, showsIndicators: false, content: {
-                    /// Top banner
+                    // MARK: Top banner
                     HStack(spacing: 15) {
                         VStack(alignment: .leading, spacing: 0) {
                             HStack(alignment: .top, spacing: 4){
@@ -99,7 +93,7 @@ struct HomeVC: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding([.top], 25)
                     
-                    /// Gift card
+                    // MARK: Gift card
                     VStack() {
                         HStack{
                             Text("Gift cards")
@@ -129,7 +123,7 @@ struct HomeVC: View {
                     }
                     .padding([.top], 10)
                     
-                    /// Recent orders
+                    // MARK: Reccent order
                     VStack(spacing: 5) {
                         HStack{
                             Text("Current orders")
@@ -173,7 +167,7 @@ struct HomeVC: View {
                     }
                     .padding([.top], 20)
                     
-                    /// Coffee shops
+                    // MARK: Coffee shop
                     VStack(spacing: 5) {
                         HStack{
                             Text("Coffee shops")
@@ -196,7 +190,7 @@ struct HomeVC: View {
                                             .cornerRadius(15)
                                             .scaledToFill()
                                             .frame(maxWidth: .infinity, alignment: .leading)
-                                        VStack(alignment: .leading, spacing: 10){
+                                        VStack(alignment: .leading, spacing: 8){
                                             Text(item.street)
                                                 .customFont(.NunitoRegular(size: 17))
                                                 .lineLimit(2)
