@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		BAF1A8492AE902F1005C3240 /* StarbuckRevampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8482AE902F1005C3240 /* StarbuckRevampApp.swift */; };
-		BAF1A84B2AE902F1005C3240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A84A2AE902F1005C3240 /* ContentView.swift */; };
-		BAF1A84D2AE902F2005C3240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A84C2AE902F2005C3240 /* Assets.xcassets */; };
-		BAF1A8502AE902F2005C3240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A84F2AE902F2005C3240 /* Preview Assets.xcassets */; };
+		BAF1A8832AE90505005C3240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8822AE90505005C3240 /* Assets.xcassets */; };
+		BAF1A8862AE90567005C3240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8852AE90567005C3240 /* Preview Assets.xcassets */; };
+		BAF1A88F2AE9062E005C3240 /* UIImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A88D2AE9062E005C3240 /* UIImageExtention.swift */; };
+		BAF1A8902AE9062E005C3240 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A88E2AE9062E005C3240 /* ViewExtension.swift */; };
+		BAF1A8922AE9063C005C3240 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8912AE9063C005C3240 /* HomeVC.swift */; };
+		BAF1A8942AE90644005C3240 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8932AE90644005C3240 /* NavBar.swift */; };
+		BAF1A8962AE90672005C3240 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8952AE90672005C3240 /* Colors.swift */; };
+		BAF1A8982AE9F56F005C3240 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8972AE9F56F005C3240 /* Icons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BAF1A8452AE902F1005C3240 /* StarbuckRevamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbuckRevamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF1A8482AE902F1005C3240 /* StarbuckRevampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbuckRevampApp.swift; sourceTree = "<group>"; };
-		BAF1A84A2AE902F1005C3240 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BAF1A84C2AE902F2005C3240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BAF1A84F2AE902F2005C3240 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BAF1A8822AE90505005C3240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAF1A8852AE90567005C3240 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BAF1A88D2AE9062E005C3240 /* UIImageExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtention.swift; sourceTree = "<group>"; };
+		BAF1A88E2AE9062E005C3240 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		BAF1A8912AE9063C005C3240 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BAF1A8932AE90644005C3240 /* NavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		BAF1A8952AE90672005C3240 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BAF1A8972AE9F56F005C3240 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,18 +61,103 @@
 		BAF1A8472AE902F1005C3240 /* StarbuckRevamp */ = {
 			isa = PBXGroup;
 			children = (
+				BAF1A8792AE9045E005C3240 /* Commons */,
+				BAF1A8782AE9045E005C3240 /* Models */,
+				BAF1A87B2AE9045E005C3240 /* Repositories */,
+				BAF1A87C2AE9045E005C3240 /* Resources */,
+				BAF1A87D2AE9045E005C3240 /* Screens */,
+				BAF1A8812AE9045E005C3240 /* Utils */,
 				BAF1A8482AE902F1005C3240 /* StarbuckRevampApp.swift */,
-				BAF1A84A2AE902F1005C3240 /* ContentView.swift */,
-				BAF1A84C2AE902F2005C3240 /* Assets.xcassets */,
-				BAF1A84E2AE902F2005C3240 /* Preview Content */,
+				BAF1A8822AE90505005C3240 /* Assets.xcassets */,
+				BAF1A8842AE90567005C3240 /* Preview Content */,
 			);
 			path = StarbuckRevamp;
 			sourceTree = "<group>";
 		};
-		BAF1A84E2AE902F2005C3240 /* Preview Content */ = {
+		BAF1A8782AE9045E005C3240 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BAF1A84F2AE902F2005C3240 /* Preview Assets.xcassets */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BAF1A8792AE9045E005C3240 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1A87A2AE9045E005C3240 /* Extensions */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		BAF1A87A2AE9045E005C3240 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1A88D2AE9062E005C3240 /* UIImageExtention.swift */,
+				BAF1A88E2AE9062E005C3240 /* ViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BAF1A87B2AE9045E005C3240 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BAF1A87C2AE9045E005C3240 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BAF1A87D2AE9045E005C3240 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1A87E2AE9045E005C3240 /* Home */,
+				BAF1A87F2AE9045E005C3240 /* Common */,
+				BAF1A8802AE9045E005C3240 /* NavigationTab */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BAF1A87E2AE9045E005C3240 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1A8912AE9063C005C3240 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BAF1A87F2AE9045E005C3240 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BAF1A8802AE9045E005C3240 /* NavigationTab */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1A8932AE90644005C3240 /* NavBar.swift */,
+			);
+			path = NavigationTab;
+			sourceTree = "<group>";
+		};
+		BAF1A8812AE9045E005C3240 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1A8952AE90672005C3240 /* Colors.swift */,
+				BAF1A8972AE9F56F005C3240 /* Icons.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BAF1A8842AE90567005C3240 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1A8852AE90567005C3240 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -125,8 +220,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAF1A8502AE902F2005C3240 /* Preview Assets.xcassets in Resources */,
-				BAF1A84D2AE902F2005C3240 /* Assets.xcassets in Resources */,
+				BAF1A8862AE90567005C3240 /* Preview Assets.xcassets in Resources */,
+				BAF1A8832AE90505005C3240 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAF1A84B2AE902F1005C3240 /* ContentView.swift in Sources */,
+				BAF1A8982AE9F56F005C3240 /* Icons.swift in Sources */,
+				BAF1A8942AE90644005C3240 /* NavBar.swift in Sources */,
+				BAF1A8962AE90672005C3240 /* Colors.swift in Sources */,
+				BAF1A8902AE9062E005C3240 /* ViewExtension.swift in Sources */,
+				BAF1A8922AE9063C005C3240 /* HomeVC.swift in Sources */,
+				BAF1A88F2AE9062E005C3240 /* UIImageExtention.swift in Sources */,
 				BAF1A8492AE902F1005C3240 /* StarbuckRevampApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
