@@ -24,6 +24,11 @@ enum Icons: String {
     case giftImage
     case icHeardFill
     case icHeard
+    case icLocation
+    case icFilter
+    case payWithStar
+    case QRcode
+    case scanToEarn
     
     var value: String {
         return self.rawValue

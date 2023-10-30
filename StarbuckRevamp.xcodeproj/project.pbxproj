@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA02AC212AEF4EBD005EA728 /* PayWithStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02AC202AEF4EBD005EA728 /* PayWithStar.swift */; };
+		BA02AC232AEF5532005EA728 /* ScanToEarn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02AC222AEF5532005EA728 /* ScanToEarn.swift */; };
 		BACA05FA2AEA501B0029076D /* shopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05F92AEA501B0029076D /* shopModel.swift */; };
+		BACA05FD2AEB4B530029076D /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05FC2AEB4B530029076D /* OrderVC.swift */; };
+		BACA05FF2AEB6B190029076D /* ProductCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05FE2AEB6B190029076D /* ProductCategoryModel.swift */; };
+		BACA06012AEB77CA0029076D /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA06002AEB77CA0029076D /* ProductItemView.swift */; };
+		BACA06032AEB8B420029076D /* CoffeeShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA06022AEB8B420029076D /* CoffeeShopView.swift */; };
+		BACA06072AEB8F360029076D /* StarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA06062AEB8F360029076D /* StarVC.swift */; };
+		BACA060A2AEB933D0029076D /* ViewToUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA06092AEB933D0029076D /* ViewToUIImage.swift */; };
+		BACA060C2AEB94CE0029076D /* StarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA060B2AEB94CE0029076D /* StarViewModel.swift */; };
+		BACA060F2AEBAECB0029076D /* CustomSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA060E2AEBAECB0029076D /* CustomSegment.swift */; };
 		BAF1A8492AE902F1005C3240 /* StarbuckRevampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8482AE902F1005C3240 /* StarbuckRevampApp.swift */; };
 		BAF1A8832AE90505005C3240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8822AE90505005C3240 /* Assets.xcassets */; };
 		BAF1A8862AE90567005C3240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A8852AE90567005C3240 /* Preview Assets.xcassets */; };
@@ -32,7 +42,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA02AC202AEF4EBD005EA728 /* PayWithStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWithStar.swift; sourceTree = "<group>"; };
+		BA02AC222AEF5532005EA728 /* ScanToEarn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanToEarn.swift; sourceTree = "<group>"; };
 		BACA05F92AEA501B0029076D /* shopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopModel.swift; sourceTree = "<group>"; };
+		BACA05FC2AEB4B530029076D /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
+		BACA05FE2AEB6B190029076D /* ProductCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryModel.swift; sourceTree = "<group>"; };
+		BACA06002AEB77CA0029076D /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
+		BACA06022AEB8B420029076D /* CoffeeShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopView.swift; sourceTree = "<group>"; };
+		BACA06062AEB8F360029076D /* StarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarVC.swift; sourceTree = "<group>"; };
+		BACA06092AEB933D0029076D /* ViewToUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToUIImage.swift; sourceTree = "<group>"; };
+		BACA060B2AEB94CE0029076D /* StarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewModel.swift; sourceTree = "<group>"; };
+		BACA060E2AEBAECB0029076D /* CustomSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegment.swift; sourceTree = "<group>"; };
 		BAF1A8452AE902F1005C3240 /* StarbuckRevamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbuckRevamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF1A8482AE902F1005C3240 /* StarbuckRevampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbuckRevampApp.swift; sourceTree = "<group>"; };
 		BAF1A8822AE90505005C3240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +89,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BACA05FB2AEB4B3B0029076D /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				BACA05FC2AEB4B530029076D /* OrderVC.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		BACA06042AEB8BCE0029076D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				BACA06022AEB8B420029076D /* CoffeeShopView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		BACA06052AEB8F260029076D /* Star */ = {
+			isa = PBXGroup;
+			children = (
+				BACA06102AEBBB380029076D /* Components */,
+				BACA06062AEB8F360029076D /* StarVC.swift */,
+				BACA060B2AEB94CE0029076D /* StarViewModel.swift */,
+			);
+			path = Star;
+			sourceTree = "<group>";
+		};
+		BACA06082AEB927B0029076D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BACA060D2AEBAEA70029076D /* Segment */ = {
+			isa = PBXGroup;
+			children = (
+				BACA060E2AEBAECB0029076D /* CustomSegment.swift */,
+			);
+			path = Segment;
+			sourceTree = "<group>";
+		};
+		BACA06102AEBBB380029076D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BA02AC202AEF4EBD005EA728 /* PayWithStar.swift */,
+				BA02AC222AEF5532005EA728 /* ScanToEarn.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		BAF1A83C2AE902F1005C3240 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +160,7 @@
 			children = (
 				BAF1A8A52AEA07BD005C3240 /* Info.plist */,
 				BAF1A8792AE9045E005C3240 /* Commons */,
+				BACA06092AEB933D0029076D /* ViewToUIImage.swift */,
 				BAF1A8782AE9045E005C3240 /* Models */,
 				BAF1A87B2AE9045E005C3240 /* Repositories */,
 				BAF1A87D2AE9045E005C3240 /* Screens */,
@@ -106,6 +177,7 @@
 			children = (
 				BAF1A8B42AEA26AA005C3240 /* ProductModel.swift */,
 				BACA05F92AEA501B0029076D /* shopModel.swift */,
+				BACA05FE2AEB6B190029076D /* ProductCategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +185,7 @@
 		BAF1A8792AE9045E005C3240 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				BACA06082AEB927B0029076D /* Helpers */,
 				BAF1A87A2AE9045E005C3240 /* Extensions */,
 			);
 			path = Commons;
@@ -146,7 +219,8 @@
 		BAF1A87D2AE9045E005C3240 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				BAF1A8B32AEA1516005C3240 /* Commons */,
+				BACA06052AEB8F260029076D /* Star */,
+				BACA05FB2AEB4B3B0029076D /* Orders */,
 				BAF1A87E2AE9045E005C3240 /* Home */,
 				BAF1A87F2AE9045E005C3240 /* Common */,
 				BAF1A8802AE9045E005C3240 /* NavigationTab */,
@@ -157,6 +231,7 @@
 		BAF1A87E2AE9045E005C3240 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BACA06042AEB8BCE0029076D /* Component */,
 				BAF1A8912AE9063C005C3240 /* HomeVC.swift */,
 			);
 			path = Home;
@@ -165,6 +240,8 @@
 		BAF1A87F2AE9045E005C3240 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BACA060D2AEBAEA70029076D /* Segment */,
+				BACA06002AEB77CA0029076D /* ProductItemView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -218,13 +295,6 @@
 				BAF1A8AC2AEA1299005C3240 /* Nunito-Bold.ttf */,
 			);
 			path = Nunito;
-			sourceTree = "<group>";
-		};
-		BAF1A8B32AEA1516005C3240 /* Commons */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,15 +378,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BACA060A2AEB933D0029076D /* ViewToUIImage.swift in Sources */,
+				BACA06012AEB77CA0029076D /* ProductItemView.swift in Sources */,
+				BACA060F2AEBAECB0029076D /* CustomSegment.swift in Sources */,
 				BAF1A8982AE9F56F005C3240 /* Icons.swift in Sources */,
 				BAF1A8942AE90644005C3240 /* NavBar.swift in Sources */,
+				BACA060C2AEB94CE0029076D /* StarViewModel.swift in Sources */,
 				BAF1A8962AE90672005C3240 /* Colors.swift in Sources */,
 				BACA05FA2AEA501B0029076D /* shopModel.swift in Sources */,
 				BAF1A8902AE9062E005C3240 /* ViewExtension.swift in Sources */,
+				BACA06072AEB8F360029076D /* StarVC.swift in Sources */,
+				BACA05FF2AEB6B190029076D /* ProductCategoryModel.swift in Sources */,
 				BAF1A8922AE9063C005C3240 /* HomeVC.swift in Sources */,
+				BA02AC232AEF5532005EA728 /* ScanToEarn.swift in Sources */,
 				BAF1A88F2AE9062E005C3240 /* UIImageExtention.swift in Sources */,
 				BAF1A8492AE902F1005C3240 /* StarbuckRevampApp.swift in Sources */,
+				BA02AC212AEF4EBD005EA728 /* PayWithStar.swift in Sources */,
 				BAF1A8B52AEA26AA005C3240 /* ProductModel.swift in Sources */,
+				BACA06032AEB8B420029076D /* CoffeeShopView.swift in Sources */,
+				BACA05FD2AEB4B530029076D /* OrderVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

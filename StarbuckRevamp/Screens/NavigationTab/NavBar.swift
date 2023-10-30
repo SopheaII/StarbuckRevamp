@@ -21,8 +21,9 @@ struct NavBar: View {
         let appearance = UITabBarAppearance()
         appearance.backgroundImage = UIImage()
         appearance.shadowImage = image
+        appearance.backgroundColor = UIColor(.white)
         UITabBar.appearance().standardAppearance = appearance
-        UITabBar.appearance().backgroundColor = UIColor.white
+        UITabBar.appearance().backgroundColor = UIColor(Colors.appBg.value)
     }
     
     var body: some View {
@@ -36,7 +37,7 @@ struct NavBar: View {
                 }
                 Text("Home")
             }.tag(0)
-            Text("Order screen").tabItem{
+            OrderVC().tabItem{
                 if selection == 1 {
                     Image(Icons.icHotCupSelected.value)
                 } else {
@@ -44,7 +45,7 @@ struct NavBar: View {
                 }
                 Text("Order")
             }.tag(1)
-            Text("Start screen").tabItem{
+            StarVC().tabItem{
                 if selection == 2 {
                     Image(Icons.icStarSelected.value)
                 } else {

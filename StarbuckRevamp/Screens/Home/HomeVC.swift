@@ -13,7 +13,6 @@ struct HomeVC: View {
         ProductModel(name: "Everything & Cheddar Bagel", image: "coffee2", isFavorite: false),
         ProductModel(name: "Veranda", image: "coffee1", isFavorite: false)
     ]
-    
     let shopData = [
         ShopModel(street: "108th Ave Ne #140", image: "coffeeShop1", shopTime: "7AM - 6AM", status: "Open now"),
         ShopModel(street: "409th Gle #340", image: "coffeeShop1", shopTime: "7PM - 6AM", status: "Open now")
@@ -21,8 +20,7 @@ struct HomeVC: View {
     
     var body: some View {
         ZStack(alignment: .top, content: {
-            Color.white.ignoresSafeArea()
-            //            Colors.appBg.value.ignoresSafeArea()
+            Colors.appBg.value.ignoresSafeArea()
             
             VStack(alignment: .leading, spacing: 0, content: {
                 
@@ -124,7 +122,7 @@ struct HomeVC: View {
                     .padding([.top], 10)
                     
                     // MARK: Reccent order
-                    VStack(spacing: 5) {
+                    VStack(spacing: 15) {
                         HStack{
                             Text("Current orders")
                                 .customFont(.NunitoBold(size: 17))
@@ -137,30 +135,9 @@ struct HomeVC: View {
                         }
                         
                         ScrollView(.horizontal, showsIndicators: false, content: {
-                            HStack(spacing: 0) {
+                            HStack(spacing: 10) {
                                 ForEach(productData, id: \.self) { item in
-                                    Button(action: {}) {
-                                        ZStack(alignment: .top){
-                                            VStack(alignment: .center, spacing: 0){
-                                                Image(item.image)
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 120,height: 120)
-                                                Text(item.name)
-                                                    .customFont(.NunitoRegular(size: 17))
-                                                    .lineLimit(2)
-                                                    .multilineTextAlignment(.center)
-                                                    .frame(alignment: .top)
-                                                    .frame(height: 50)
-                                                    .foregroundColor(.black)
-                                            }
-                                            Image(item.isFavorite ? Icons.icHeardFill.value : Icons.icHeard.value)
-                                                .resizable()
-                                                .frame(width: 28, height: 28)
-                                                .frame(maxWidth: .infinity, alignment: .trailing)
-                                        }
-                                        .frame(width: 150 ,height: 240)
-                                    }
+                                    ProductItemView(item: item)
                                 }
                             }
                         })
@@ -168,7 +145,7 @@ struct HomeVC: View {
                     .padding([.top], 20)
                     
                     // MARK: Coffee shop
-                    VStack(spacing: 5) {
+                    VStack(spacing: 15) {
                         HStack{
                             Text("Coffee shops")
                                 .customFont(.NunitoBold(size: 17))
@@ -183,48 +160,10 @@ struct HomeVC: View {
                         ScrollView(.horizontal, showsIndicators: false, content: {
                             HStack(spacing: 15) {
                                 ForEach(shopData, id: \.self) { item in
-                                    HStack(alignment: .top, spacing: 8){
-                                        Image(item.image)
-                                            .resizable()
-                                            .frame(width: 160,height: 100)
-                                            .cornerRadius(15)
-                                            .scaledToFill()
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                        VStack(alignment: .leading, spacing: 8){
-                                            Text(item.street)
-                                                .customFont(.NunitoRegular(size: 17))
-                                                .lineLimit(2)
-                                                .foregroundColor(.black)
-                                                .frame(maxWidth: .infinity, alignment: .leading)
-                                            HStack(spacing: 0) {
-                                                Image(systemName: "clock")
-                                                    .foregroundColor(Colors.softGray4.value)
-                                                Text(item.shopTime)
-                                                    .customFont(.NunitoMedium(size: 14))
-                                                    .foregroundColor(Colors.softGray4.value)
-                                                
-                                            }
-                                            HStack(spacing: 0) {
-                                                Text(item.status)
-                                                    .customFont(.NunitoMedium(size: 14))
-                                                    .foregroundColor(Colors.mainColor.value)
-                                                Spacer()
-                                                Button(action: {}) {
-                                                    Text("Buy now")
-                                                        .customFont(.NunitoMedium(size: 17))
-                                                        .padding(5)
-                                                        .foregroundColor(.white)
-                                                        .background(Colors.mainColor.value)
-                                                        .cornerRadius(5)
-                                                }
-                                            }
-                                        }
-                                    }
-                                    .frame(width: 320 ,height: 170, alignment: .top)
+                                    CoffeeShopView(item: item)
                                 }
                             }
                         })
-                        .padding([.top], 20)
                     }
                     .padding([.top], 20)
                 })
