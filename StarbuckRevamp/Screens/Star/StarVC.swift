@@ -15,6 +15,7 @@ struct StarVC: View {
     
     func onFirstAppear() {
     }
+    
     var body: some View {
         ZStack(alignment: .top, content: {
             Colors.appBg.value.ignoresSafeArea()

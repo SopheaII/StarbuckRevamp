@@ -11,7 +11,7 @@ struct PayWithStar: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack() {
-                Image(Icons.payWithStar.value)
+                Image("payWithStar")
                     .resizable()
                     .frame(height: 200)
                     .scaledToFit()

@@ -11,7 +11,7 @@ struct ProductItemView: View {
     var item: ProductModel
     
     var body: some View {
-        Button(action: {}) {
+//        Button(action: {}) {
             ZStack(alignment: .top){
                 VStack(alignment: .center, spacing: 0){
                     Image(item.image)
@@ -37,6 +37,6 @@ struct ProductItemView: View {
             .frame(width: 150 ,height: 200)
             .background(.white)
             .cornerRadius(14)
-        }
+//        }
     }
 }

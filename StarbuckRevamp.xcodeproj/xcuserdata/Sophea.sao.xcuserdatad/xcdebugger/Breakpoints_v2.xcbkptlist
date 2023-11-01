@@ -3,4 +3,178 @@
    uuid = "BB454170-C7D4-4B78-A515-850E9B4A7738"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3BFE4FBC-3037-4D85-B22B-DC243E8D1CF9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarbuckRevamp/Commons/Extensions/NavBarExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "showTabBar()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7A24F54-DE5C-45AD-A075-DCCA7F6F62FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarbuckRevamp/Commons/Extensions/NavBarExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "hideTabBar()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D7A24F54-DE5C-45AD-A075-DCCA7F6F62FF - c3dde46ca10b8ef3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static StarbuckRevamp.TabBarModifier.hideTabBar() -&gt; ()"
+                  moduleName = "StarbuckRevamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sophea.sao/Desktop/Swift-Development/StarbuckRevamp/StarbuckRevamp/Commons/Extensions/NavBarExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "D7A24F54-DE5C-45AD-A075-DCCA7F6F62FF - c3dde46ca10b9189"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static StarbuckRevamp.TabBarModifier.hideTabBar() -&gt; ()"
+                  moduleName = "StarbuckRevamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sophea.sao/Desktop/Swift-Development/StarbuckRevamp/StarbuckRevamp/Commons/Extensions/NavBarExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08CEB9D1-886E-40E1-A6FF-35DF1C6DF08B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarbuckRevamp/Commons/Extensions/NavBarExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "showTabBar()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8EB7B47B-5F56-4FC3-B3B0-8FBB56798A28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarbuckRevamp/Commons/Extensions/NavBarExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "hideTabBar()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8EB7B47B-5F56-4FC3-B3B0-8FBB56798A28 - c3dde46ca10b8e77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static StarbuckRevamp.TabBarModifier.hideTabBar() -&gt; ()"
+                  moduleName = "StarbuckRevamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sophea.sao/Desktop/Swift-Development/StarbuckRevamp/StarbuckRevamp/Commons/Extensions/NavBarExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "8EB7B47B-5F56-4FC3-B3B0-8FBB56798A28 - 8670d6cd8150dd7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.UIView) -&gt; () in static StarbuckRevamp.TabBarModifier.hideTabBar() -&gt; ()"
+                  moduleName = "StarbuckRevamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sophea.sao/Desktop/Swift-Development/StarbuckRevamp/StarbuckRevamp/Commons/Extensions/NavBarExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "8EB7B47B-5F56-4FC3-B3B0-8FBB56798A28 - c3dde46ca10b9189"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static StarbuckRevamp.TabBarModifier.hideTabBar() -&gt; ()"
+                  moduleName = "StarbuckRevamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sophea.sao/Desktop/Swift-Development/StarbuckRevamp/StarbuckRevamp/Commons/Extensions/NavBarExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "8EB7B47B-5F56-4FC3-B3B0-8FBB56798A28 - c3dde46ca10b9189"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static StarbuckRevamp.TabBarModifier.hideTabBar() -&gt; ()"
+                  moduleName = "StarbuckRevamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sophea.sao/Desktop/Swift-Development/StarbuckRevamp/StarbuckRevamp/Commons/Extensions/NavBarExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAC855A9-73D4-4B85-A925-9C45A157F7F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarbuckRevamp/Commons/Extensions/AnimationExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

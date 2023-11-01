@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct NavBar: View {
-    
     @State private var selection = 0
     let image = UIImage.gradientImageWithBounds(
         bounds: CGRect( x: 0, y: 0, width: UIScreen.main.scale, height: 10),
@@ -16,6 +15,7 @@ struct NavBar: View {
             UIColor.white.withAlphaComponent(1).cgColor
         ]
     )
+    
     
     init() {
         let appearance = UITabBarAppearance()
@@ -28,7 +28,8 @@ struct NavBar: View {
     
     var body: some View {
         TabView(selection: $selection){
-            HomeVC().tabItem{
+            HomeVC()
+                .tabItem{
                 if selection == 0 {
                     Image(Icons.icHomeSelected.value)
                 } else {
@@ -54,7 +55,7 @@ struct NavBar: View {
                 Text("Stars")
             }.tag(2)
             
-            Text("Basket screen")
+            BasketVC()
                 .tabItem{
                     if selection == 3 {
                         Image(Icons.icBasketSelected.value)
@@ -73,10 +74,10 @@ struct NavBar: View {
                     Text("Account")
                 }.tag(4)
         }
-//        .padding([.leading, .trailing], 10)
         .accentColor(Colors.mainColor.value)
     }
 }
+
 
 #Preview {
     NavBar()

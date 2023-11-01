@@ -9,14 +9,48 @@ import SwiftUI
 
 struct HomeVC: View {
     let productData = [
-        ProductModel(name: "Veranda blend", image: "coffee1", isFavorite: true),
-        ProductModel(name: "Everything & Cheddar Bagel", image: "coffee2", isFavorite: false),
-        ProductModel(name: "Veranda", image: "coffee1", isFavorite: false)
+        ProductModel(name: "Veranda blend", image: "coffee1", isFavorite: true, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$1.78", location: "108th Ave Ne #140", ccal: 5),
+        
+        ProductModel(name: "Everything & Cheddar Bagel", image: "coffee2", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$3.78", location: "108th Ave Ne #140", ccal: 5),
+        
+        ProductModel(name: "Veranda", image: "coffee1", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5),
     ]
+    
     let shopData = [
         ShopModel(street: "108th Ave Ne #140", image: "coffeeShop1", shopTime: "7AM - 6AM", status: "Open now"),
         ShopModel(street: "409th Gle #340", image: "coffeeShop1", shopTime: "7PM - 6AM", status: "Open now")
     ]
+    
+    var rightBarItemView: some View {
+        return HStack(alignment: .center, spacing: 2) {
+            Image(Icons.icLocation.value)
+                .resizable()
+                .frame(width: 16, height: 16)
+            Button(action: {}) {
+                Text("Choose the store")
+                    .underline()
+                    .baselineOffset(4)
+                    .customFont(.NunitoMedium(size: 15))
+                    .foregroundColor(Colors.softGray5.value)
+            }
+        }
+    }
+    
     
     var body: some View {
         ZStack(alignment: .top, content: {
@@ -97,6 +131,7 @@ struct HomeVC: View {
                             Text("Gift cards")
                                 .customFont(.NunitoBold(size: 17))
                             Spacer()
+                            
                             Button(action: {}) {
                                 Text("View all")
                                     .customFont(.NunitoBold(size: 17))
@@ -107,13 +142,17 @@ struct HomeVC: View {
                         ScrollView(.horizontal, showsIndicators: false, content: {
                             HStack(spacing: 15) {
                                 ForEach(1...2, id: \.self) {_ in
-                                    Button(action: {}) {
-                                        Image(Icons.giftImage.value)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(height: 200)
-                                            .cornerRadius(15)
-                                    }
+                                    NavigationLink(
+                                        destination: GiftVC().customHeader(backTitle: "Home", title: "Gift cards")
+                                        , label: {
+                                            Image(Icons.giftImage.value)
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(height: 200)
+                                                .cornerRadius(15)
+                                        }
+                                    )
+                                    .buttonStyle(PlainButtonStyle())
                                 }
                             }
                         })
@@ -137,7 +176,14 @@ struct HomeVC: View {
                         ScrollView(.horizontal, showsIndicators: false, content: {
                             HStack(spacing: 10) {
                                 ForEach(productData, id: \.self) { item in
-                                    ProductItemView(item: item)
+                                    NavigationLink(
+                                        destination: ProductDetailVC(productData: item)
+                                            .customHeader(backTitle: "Current coffees", rightView: rightBarItemView)
+                                        , label: {
+                                            ProductItemView(item: item)
+                                        }
+                                    )
+                                    .buttonStyle(PlainButtonStyle())
                                 }
                             }
                         })

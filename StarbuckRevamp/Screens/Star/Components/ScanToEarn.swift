@@ -11,7 +11,7 @@ struct ScanToEarn: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack() {
-                Image(Icons.scanToEarn.value)
+                Image("scanToEarn")
                     .resizable()
                     .frame(height: 200)
                     .scaledToFit()
