@@ -51,5 +51,6 @@ struct CoffeeShopView: View {
 //                                    .frame(width: 320 ,height: 170, alignment: .top)
         .padding(10)
         .background(.white)
+        .cornerRadius(12)
     }
 }

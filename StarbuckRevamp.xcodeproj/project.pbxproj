@@ -185,6 +185,14 @@
 			path = BasketItem;
 			sourceTree = "<group>";
 		};
+		BA9E1E8E2AF24086000747EC /* CoffeeShop */ = {
+			isa = PBXGroup;
+			children = (
+				BACA06022AEB8B420029076D /* CoffeeShopView.swift */,
+			);
+			path = CoffeeShop;
+			sourceTree = "<group>";
+		};
 		BACA05FB2AEB4B3B0029076D /* Orders */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,7 +204,6 @@
 		BACA06042AEB8BCE0029076D /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				BACA06022AEB8B420029076D /* CoffeeShopView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -343,6 +350,7 @@
 		BAF1A87F2AE9045E005C3240 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BA9E1E8E2AF24086000747EC /* CoffeeShop */,
 				BA5EDD6F2AF0BE950019455F /* ProductItem */,
 				BA5EDD642AEFA27F0019455F /* NavigationBack */,
 				BACA060D2AEBAEA70029076D /* Segment */,

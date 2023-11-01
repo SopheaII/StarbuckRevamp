@@ -51,7 +51,6 @@ struct HomeVC: View {
         }
     }
     
-    
     var body: some View {
         ZStack(alignment: .top, content: {
             Colors.appBg.value.ignoresSafeArea()
