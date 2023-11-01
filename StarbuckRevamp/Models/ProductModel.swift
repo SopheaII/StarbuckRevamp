@@ -27,7 +27,7 @@ struct ProductModel: Equatable, Hashable  {
         coffeeSizes: [CoffeeSize] = [],
         addIns: String = "",
         flavors: String = "",
-        price: String = "",
+        price: String = "$0.00",
         location: String = "",
         ccal: Float = 0.0
     ) {

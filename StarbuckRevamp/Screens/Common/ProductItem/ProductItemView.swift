@@ -9,6 +9,12 @@ import SwiftUI
 
 struct ProductItemView: View {
     var item: ProductModel
+    @State var isFavClicked : Bool = false
+    
+    init(item: ProductModel) {
+        self.item = item
+        self.isFavClicked = item.isFavorite
+    }
     
     var body: some View {
 //        Button(action: {}) {
@@ -26,13 +32,14 @@ struct ProductItemView: View {
                         .frame(height: 50)
                         .foregroundColor(.black)
                 }
-                Button(action:{}) {
-                    Image(item.isFavorite ? Icons.icHeardFill.value : Icons.icHeard.value)
+                Button(action:{isFavClicked.toggle()}) {
+                    Image(isFavClicked ? Icons.icHeardFill.value : Icons.icHeard.value)
                         .resizable()
-                        .frame(width: 28, height: 28)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .offset(x: -10)
                 }
+                .frame(width: 28, height: 28)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .offset(x: -10)
+                .buttonStyle(ScaleButtonStyle())
             }
             .frame(width: 150 ,height: 200)
             .background(.white)

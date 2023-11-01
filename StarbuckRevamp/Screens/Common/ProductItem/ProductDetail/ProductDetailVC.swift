@@ -21,12 +21,14 @@ struct ProductDetailVC: View {
     var cupSizes: [Int]
     @State var addInsSearch = ""
     @State var flavorSearch = ""
+    @State var isFavClicked : Bool = false
     
     init(productData: ProductModel, searchText: String = "", cfSizeSelected: Int = 0, cupSizes: [Int] = []) {
         self.productData = productData
         self.searchText = searchText
         self.cfSizeSelected = cfSizeSelected
         self.cupSizes = cupSizes
+        self.isFavClicked = productData.isFavorite
         
         for i in productData.coffeeSizes {
             switch i.size {
@@ -57,13 +59,14 @@ struct ProductDetailVC: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 150)
-                            Button(action:{}) {
-                                Image(productData.isFavorite ? Icons.icHeardFill.value : Icons.icHeard.value)
+                            Button(action:{isFavClicked.toggle()}) {
+                                Image(isFavClicked ? Icons.icHeardFill.value : Icons.icHeard.value)
                                     .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .frame(maxWidth: .infinity, alignment: .topTrailing)
-                                    .offset(x: -25, y: 15)
                             }
+                            .offset(x: -25, y: 15)
+                            .frame(width: 30, height: 30)
+                            .frame(maxWidth: .infinity, alignment: .topTrailing)
+                            .buttonStyle(ScaleButtonStyle())
                             
                             Text(productData.name)
                                 .customFont(.NunitoBold(size: 18))
@@ -152,9 +155,9 @@ struct ProductDetailVC: View {
                             TextField("Add-ins", text: $addInsSearch)
                                 .customFont(.NunitoRegular(size: 17))
                                 .listRowInsets(EdgeInsets(top: 0,
-                                                      leading: 0,
-                                                      bottom: 0,
-                                                      trailing: 16))
+                                                          leading: 0,
+                                                          bottom: 0,
+                                                          trailing: 16))
                         }, label: {
                             HStack() {
                                 Text("Add-ins")
@@ -175,9 +178,9 @@ struct ProductDetailVC: View {
                             TextField("Flavors", text: $flavorSearch)
                                 .customFont(.NunitoRegular(size: 17))
                                 .listRowInsets(EdgeInsets(top: 0,
-                                                      leading: 0,
-                                                      bottom: 0,
-                                                      trailing: 16))
+                                                          leading: 0,
+                                                          bottom: 0,
+                                                          trailing: 16))
                         }, label: {
                             HStack() {
                                 Text("Flavors")
@@ -219,7 +222,7 @@ struct ProductDetailVC: View {
                 }
                 .padding([.horizontal], 20)
                 .frame(maxWidth: .infinity)
-//                .frame(height: 100)
+                //                .frame(height: 100)
                 .padding([.bottom], 1)
             }
             .padding([.top], 10)

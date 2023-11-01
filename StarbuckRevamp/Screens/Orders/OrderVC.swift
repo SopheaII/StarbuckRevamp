@@ -9,14 +9,26 @@ import SwiftUI
 
 struct OrderVC: View {
     let productData = [
-        ProductModel(name: "Veranda blend", image: "coffee2", isFavorite: true),
-        ProductModel(name: "Everything & Cheddar Bagel", image: "coffee1", isFavorite: false),
-        ProductModel(name: "Veranda", image: "coffee2", isFavorite: false)
-    ]
-    
-    let shopData = [
-        ShopModel(street: "108th Ave Ne #140", image: "coffeeShop1", shopTime: "7AM - 6AM", status: "Open now"),
-        ShopModel(street: "409th Gle #340", image: "coffeeShop1", shopTime: "7PM - 6AM", status: "Open now")
+        ProductModel(name: "Veranda blend", image: "coffee1", isFavorite: true, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$1.78", location: "108th Ave Ne #140", ccal: 5),
+        
+        ProductModel(name: "Everything & Cheddar Bagel", image: "coffee2", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$3.78", location: "108th Ave Ne #140", ccal: 5),
+        
+        ProductModel(name: "Veranda", image: "coffee1", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5),
     ]
     
     let productCategory = [
@@ -124,7 +136,14 @@ struct OrderVC: View {
                         ScrollView(.horizontal, showsIndicators: false, content: {
                             HStack(spacing: 10) {
                                 ForEach(productData, id: \.self) { item in
-                                    ProductItemView(item: item)
+                                    NavigationLink(
+                                        destination: ProductDetailVC(productData: item)
+                                            .customHeader(backTitle: "Hot coffees")
+                                        , label: {
+                                            ProductItemView(item: item)
+                                        }
+                                    )
+                                    .buttonStyle(PlainButtonStyle())
                                 }
                             }
                         })
@@ -147,7 +166,14 @@ struct OrderVC: View {
                         ScrollView(.horizontal, showsIndicators: false, content: {
                             HStack(spacing: 10) {
                                 ForEach(productData, id: \.self) { item in
-                                    ProductItemView(item: item)
+                                    NavigationLink(
+                                        destination: ProductDetailVC(productData: item)
+                                            .customHeader(backTitle: "Hot teas")
+                                        , label: {
+                                            ProductItemView(item: item)
+                                        }
+                                    )
+                                    .buttonStyle(PlainButtonStyle())
                                 }
                             }
                         })
@@ -170,7 +196,14 @@ struct OrderVC: View {
                         ScrollView(.horizontal, showsIndicators: false, content: {
                             HStack(spacing: 10) {
                                 ForEach(productData, id: \.self) { item in
-                                    ProductItemView(item: item)
+                                    NavigationLink(
+                                        destination: ProductDetailVC(productData: item)
+                                            .customHeader(backTitle: "Hot drinks")
+                                        , label: {
+                                            ProductItemView(item: item)
+                                        }
+                                    )
+                                    .buttonStyle(PlainButtonStyle())
                                 }
                             }
                         })
