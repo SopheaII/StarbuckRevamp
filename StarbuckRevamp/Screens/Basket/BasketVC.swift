@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct BasketVC: View {
     @State var productData = [
         BasketModel(product: ProductModel(name: "Veranda blend", image: "coffee1", isFavorite: true, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
@@ -42,6 +41,10 @@ struct BasketVC: View {
         productData[index].quantities = quantity
     }
     
+    func delete(at offsets: IndexSet) {
+        productData.remove(atOffsets: offsets)
+    }
+    
     var body: some View {
         ZStack(alignment: .top, content: {
             Colors.appBg.value.ignoresSafeArea()
@@ -54,23 +57,25 @@ struct BasketVC: View {
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading) {
-                        ForEach(Array(self.productData.enumerated()), id: \.offset) {index, item in
-                            NavigationLink(
-                                destination: ProductDetailVC(productData: item.product)
-                                    .customHeader(backTitle: "Bakset")
-                                , label: {
-                                    BasketItem(index: index, presenter: presenter, item: item)
-                                }
-                            )
-                            .buttonStyle(PlainButtonStyle())
+                            ForEach(Array(self.productData.enumerated()), id: \.offset) { index, item in
+                                NavigationLink(
+                                    destination: ProductDetailVC(productData: item.product)
+                                        .customHeader(backTitle: "Baskset")
+                                    , label: {
+                                        BasketItem(index: index, presenter: presenter, item: item)
+                                    }
+                                )
+                                .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
                 .padding([.top], 15)
                 
                 Spacer()
-                Button(action: {}) {
-                    ZStack{
+                NavigationLink(
+                    destination: yourOrderVC()
+                        .customHeader(backTitle: "Baskset")
+                    , label: {
                         Text("Check out")
                             .customFont(.NunitoSemiBold(size: 17))
                             .foregroundStyle(.white)
@@ -80,11 +85,10 @@ struct BasketVC: View {
                             .cornerRadius(10)
                             .padding([.bottom], 20)
                     }
-                }
+                )
+                .buttonStyle(PlainButtonStyle())
             })
             .padding([.trailing, .leading], 18)
-            
-            
         })
         .onAppear(perform: {onFirstAppear()})
     }

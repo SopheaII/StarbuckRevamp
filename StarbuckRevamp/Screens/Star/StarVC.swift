@@ -11,7 +11,6 @@ struct StarVC: View {
     @State private var category = Category.payWithStar
     @State var segmentIndex = 0
     var viewWidth = UIScreen.main.bounds.width
-    var test = [Text("ksjfsdf"), Text("sldjflsdjflsdjf")]
     
     func onFirstAppear() {
     }

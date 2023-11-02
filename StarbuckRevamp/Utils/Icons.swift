@@ -30,6 +30,7 @@ enum Icons: String {
     case icArrowBack
     case icCup
     case icCupGray
+    case icArrowUp
     
     var value: String {
         return self.rawValue

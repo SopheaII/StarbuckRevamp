@@ -24,6 +24,7 @@ extension SegmentView {
 struct CustomSegmentedPickerView: View{
     @Binding var selection: Int
     let contents: [SegmentView]
+    var isNobody = false
     
     @State private var frames = Array<CGRect>(repeating: .zero, count: 10)
     var viewWidth             = UIScreen.main.bounds.width
@@ -62,14 +63,15 @@ struct CustomSegmentedPickerView: View{
         .onAppear(perform: {
             onFirstAppear()
         })
-        ZStack() {
-            ForEach(Array(self.contents.enumerated()), id: \.offset){ index, view in
-                view.content
-                    .offset(x: viewWidth*CGFloat(index))
+        if !isNobody{
+            ZStack() {
+                ForEach(Array(self.contents.enumerated()), id: \.offset){ index, view in
+                    view.content
+                        .offset(x: viewWidth*CGFloat(index))
+                }
             }
-        }
-        .offset(x: -(viewWidth*CGFloat(selection)))
-        .animation(.easeInOut, value: selection)
+            .offset(x: -(viewWidth*CGFloat(selection)))
+            .animation(.easeInOut, value: selection)        }
     }
     
     func setFrame(index: Int, frame: CGRect) {

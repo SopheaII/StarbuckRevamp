@@ -19,60 +19,72 @@ struct BasketItem: View {
     }
     
     var body: some View {
-        HStack(alignment: .top, spacing: 2) {
-            Image(productData?.product.image ?? "")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 80, height: 80)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(productData?.product.name ?? "")
-                    .customFont(.NunitoSemiBold(size: 17))
-                    .lineLimit(1)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.black)
-                Text(productData?.product.price ?? "")
-                    .customFont(.NunitoMedium(size: 14))
-                    .foregroundColor(Colors.softGray4.value)
-                
-                HStack() {
+        ZStack(alignment: .top){
+            HStack(alignment: .top, spacing: 2) {
+                Image(productData?.product.image ?? "")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80, height: 80)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(productData?.product.name ?? "")
+                        .customFont(.NunitoSemiBold(size: 17))
+                        .lineLimit(1)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.black)
                     Text(productData?.product.price ?? "")
-                        .customFont(.NunitoBold(size: 18))
-                        .foregroundColor(Colors.mainColor.value)
-                        .padding([.top], 10)
-                    Spacer()
-                    HStack(){
-                        Button(action: {
-                            if productData?.quantities != 0 {
-                                presenter.updateQuantityCb?(index, (productData?.quantities ?? 0) - 1)
+                        .customFont(.NunitoMedium(size: 14))
+                        .foregroundColor(Colors.softGray4.value)
+                    
+                    HStack() {
+                        Text(productData?.product.price ?? "")
+                            .customFont(.NunitoBold(size: 18))
+                            .foregroundColor(Colors.mainColor.value)
+                            .padding([.top], 10)
+                        Spacer()
+                        HStack(spacing: 5){
+                            Button(action: {
+                                if productData?.quantities != 0 {
+                                    presenter.updateQuantityCb?(index, (productData?.quantities ?? 0) - 1)
+                                }
+                            }) {
+                                Image(systemName: "arrow.backward.circle")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                                    .foregroundColor(Colors.softGray5.value)
+                                    .padding(10)
                             }
-                        }) {
-                            Image(systemName: "arrow.backward.circle")
-                                .resizable()
-                                .frame(width: 25, height: 25)
-                                .foregroundColor(Colors.softGray5.value)
-                                .padding(10)
-                        }
-                        Text("\(productData?.quantities ?? 0)")
-                            .customFont(.NunitoRegular(size: 17))
-                            .foregroundColor(.black)
-                        Button(action: { 
-                            presenter.updateQuantityCb?(index, (productData?.quantities ?? 0) + 1)
-                        }) {
-                            Image(systemName: "arrow.forward.circle")
-                                .resizable()
-                                .frame(width: 25, height: 25)
-                                .foregroundColor(Colors.softGray5.value)
-                                .padding(10)
+                            Text("\(productData?.quantities ?? 0)")
+                                .customFont(.NunitoRegular(size: 17))
+                                .foregroundColor(.black)
+                            Button(action: {
+                                presenter.updateQuantityCb?(index, (productData?.quantities ?? 0) + 1)
+                            }) {
+                                Image(systemName: "arrow.forward.circle")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                                    .foregroundColor(Colors.softGray5.value)
+                                    .padding(10)
+                            }
                         }
                     }
                 }
+                .padding([.trailing], 30)
+                Spacer()
             }
-            Spacer()
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(height: 110)
+            .background(.white)
+            .cornerRadius(14)
+            
+            Button(action:{}) {
+                Image(systemName: "multiply")
+                    .resizable()
+                    .foregroundColor(Colors.mainColor.value)
+            }
+            .offset(x: -8, y: 8)
+            .frame(width: 14, height: 14)
+            .frame(maxWidth: .infinity, alignment: .topTrailing)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .frame(height: 110)
-        .background(.white)
-        .cornerRadius(14)
     }
 }
 
