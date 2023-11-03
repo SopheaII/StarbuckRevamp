@@ -11,8 +11,11 @@ struct BackNavigationModifier: ViewModifier {
     let backTitle: String
     let title: String
     let rightView: AnyView
-    
+    var backToRoot: Bool
     @Environment(\.presentationMode) var presentationMode
+    
+    @EnvironmentObject var appState: AppState
+    
     func body(content: Content) -> some View {
         return content.padding(.zero)
             .navigationBarBackButtonHidden(true)
@@ -20,7 +23,11 @@ struct BackNavigationModifier: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
+                        if backToRoot {
+                            self.appState.isPopToRoot = true
+                        }else {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
                     }) {
                         HStack() {
                             Image(Icons.icArrowBack.value)
@@ -46,7 +53,7 @@ struct BackNavigationModifier: ViewModifier {
 }
 
 extension View {
-    func customHeader(backTitle: String = "Back", title: String = "", rightView: some View = EmptyView()) -> some View {
-        return self.modifier(BackNavigationModifier(backTitle: backTitle, title: title, rightView: AnyView(rightView)))
+    func customHeader(backTitle: String = "Back", title: String = "", rightView: some View = EmptyView(), backToRoot: Bool = false) -> some View {
+        return self.modifier(BackNavigationModifier(backTitle: backTitle, title: title, rightView: AnyView(rightView), backToRoot: backToRoot))
     }
 }

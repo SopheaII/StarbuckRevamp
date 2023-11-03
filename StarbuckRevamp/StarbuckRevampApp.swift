@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct StarbuckRevampApp: App {
     @State var isNavigatetoNavBar = true
+    @StateObject var appSate = AppState()
     var body: some Scene {
         WindowGroup {
             NavigationStack {
@@ -26,6 +27,7 @@ struct StarbuckRevampApp: App {
                 }
             }
             .navigationViewStyle(.stack)
+            .environmentObject(appSate)
         }
     }
 }

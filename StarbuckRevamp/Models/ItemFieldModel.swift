@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct ItemField: Equatable, Hashable {
+    let id: Int
+    let key: String
+    let value: String
+}

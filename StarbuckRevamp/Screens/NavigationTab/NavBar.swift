@@ -9,13 +9,14 @@ import SwiftUI
 
 struct NavBar: View {
     @State private var selection = 0
+    @EnvironmentObject var appState: AppState
+    
     let image = UIImage.gradientImageWithBounds(
         bounds: CGRect( x: 0, y: 0, width: UIScreen.main.scale, height: 10),
         colors: [
             UIColor.white.withAlphaComponent(1).cgColor
         ]
     )
-    
     
     init() {
         let appearance = UITabBarAppearance()
@@ -75,6 +76,9 @@ struct NavBar: View {
                 }.tag(4)
         }
         .accentColor(Colors.mainColor.value)
+        .onReceive(self.appState.$navBarselected, perform: { newValue in
+            selection = newValue
+        })
     }
 }
 

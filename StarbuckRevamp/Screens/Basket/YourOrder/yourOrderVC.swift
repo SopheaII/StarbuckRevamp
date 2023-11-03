@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct yourOrderVC: View {
+    
     @State var productData = [
         BasketModel(product: ProductModel(name: "Veranda blend", image: "coffee1", isFavorite: true, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
             CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
@@ -42,9 +43,6 @@ struct yourOrderVC: View {
     @State var minuteField = ""
     @State var timeSegmentIndex = 0
     @State var paymentSelected = -1
-    
-    init() {
-    }
     
     func firstAppear() {
         currentRecepientOption = recepientOption.first?.title ?? ""
@@ -247,21 +245,32 @@ struct yourOrderVC: View {
                         })
                         
                     })
+                    .padding([.horizontal], 0.5)
                 }
                 
                 // MARK: Pay button
                 Spacer()
-                Text("Check out")
-                    .customFont(.NunitoSemiBold(size: 17))
-                    .foregroundStyle(.white)
-                    .padding(12)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Colors.mainColor.value)
-                    .cornerRadius(10)
+                NavigationLink(
+                    destination: SuccessVC()
+                        .customHeader(backTitle: "Home", title: "You purchase", backToRoot: true)
+                    , label: {
+                        Text("pay")
+                            .customFont(.NunitoSemiBold(size: 17))
+                            .foregroundStyle(.white)
+                            .padding(12)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .background(Colors.mainColor.value)
+                            .cornerRadius(10)
+                    }
+                )
+                .buttonStyle(PlainButtonStyle())
             }
-            .padding([.trailing, .leading], 18)
+            .padding([.horizontal], 18)
         })
         .onAppear{firstAppear()}
+        .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
     }
 }
 

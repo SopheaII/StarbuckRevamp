@@ -7,6 +7,7 @@
 
 import Foundation
 
-class AppState: ObservableObject {
-    
+class AppState: NSObject, ObservableObject {
+    @Published var isPopToRoot: Bool = false
+    @Published var navBarselected = 0
 }

@@ -9,29 +9,29 @@ import SwiftUI
 struct BasketVC: View {
     @State var productData = [
         BasketModel(product: ProductModel(name: "Veranda blend", image: "coffee1", isFavorite: true, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
-            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
-            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
-            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
-            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
         ], addIns: "", flavors: "", price: "$1.78", location: "108th Ave Ne #140", ccal: 5), quantities: 1),
         BasketModel(product: ProductModel(name: "Everything & Cheddar Bagel", image: "coffee2", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
-            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
-            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
-            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
-            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
         ], addIns: "", flavors: "", price: "$3.78", location: "108th Ave Ne #140", ccal: 5), quantities: 1),
         BasketModel(product: ProductModel(name: "Veranda", image: "coffee1", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
-            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
-            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
-            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
-            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
         ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5), quantities: 1),
     ]
     
     @StateObject var presenter =  BasketItemPresenter()
     
-    init() {
-    }
+    @State var isOrderActive = false
+    @EnvironmentObject var appState: AppState
     
     func onFirstAppear() {
         self.presenter.updateQuantityCb = self.updateQuantity
@@ -72,25 +72,34 @@ struct BasketVC: View {
                 .padding([.top], 15)
                 
                 Spacer()
-                NavigationLink(
-                    destination: yourOrderVC()
-                        .customHeader(backTitle: "Baskset")
-                    , label: {
-                        Text("Check out")
-                            .customFont(.NunitoSemiBold(size: 17))
-                            .foregroundStyle(.white)
-                            .padding(12)
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .background(Colors.mainColor.value)
-                            .cornerRadius(10)
-                            .padding([.bottom], 20)
-                    }
-                )
+                Button(action: {
+                    isOrderActive = true
+                }, label: {
+                    Text("Check out")
+                        .customFont(.NunitoSemiBold(size: 17))
+                        .foregroundStyle(.white)
+                        .padding(12)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .background(Colors.mainColor.value)
+                        .cornerRadius(10)
+                        .padding([.bottom], 20)
+                })
                 .buttonStyle(PlainButtonStyle())
+                .navigationDestination(isPresented: $isOrderActive, destination: {
+                    yourOrderVC()
+                        .customHeader(backTitle: "Baskset")
+                })
             })
             .padding([.trailing, .leading], 18)
         })
         .onAppear(perform: {onFirstAppear()})
+        .onReceive(appState.$isPopToRoot, perform: { isMoveToRoot in
+            if isMoveToRoot {
+                isOrderActive = false
+                appState.isPopToRoot = false
+                appState.navBarselected = 0 // Navigate to home screen
+            }
+        })
     }
 }
 

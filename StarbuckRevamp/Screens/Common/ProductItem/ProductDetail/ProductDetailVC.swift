@@ -222,13 +222,15 @@ struct ProductDetailVC: View {
                 }
                 .padding([.horizontal], 20)
                 .frame(maxWidth: .infinity)
-                //                .frame(height: 100)
                 .padding([.bottom], 1)
             }
             .padding([.top], 10)
             .padding([.trailing, .leading], 18)
             
         })
+        .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
     }
 }
 

@@ -10,24 +10,24 @@ import SwiftUI
 struct HomeVC: View {
     let productData = [
         ProductModel(name: "Veranda blend", image: "coffee1", isFavorite: true, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
-            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
-            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
-            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
-            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
         ], addIns: "", flavors: "", price: "$1.78", location: "108th Ave Ne #140", ccal: 5),
         
         ProductModel(name: "Everything & Cheddar Bagel", image: "coffee2", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
-            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
-            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
-            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
-            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
         ], addIns: "", flavors: "", price: "$3.78", location: "108th Ave Ne #140", ccal: 5),
         
         ProductModel(name: "Veranda", image: "coffee1", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
-            CoffeeSize(size: "sz2", label: "Short", des: "8(fl oz)", image: ""),
-            CoffeeSize(size: "sz3", label: "Tall", des: "12(fl oz)", image: ""),
-            CoffeeSize(size: "sz4", label: "Grande", des: "16(fl oz)", image: ""),
-            CoffeeSize(size: "sz5", label: "Venti", des: "20(fl oz)", image: "")
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
         ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5),
     ]
     
@@ -35,6 +35,8 @@ struct HomeVC: View {
         ShopModel(street: "108th Ave Ne #140", image: "coffeeShop1", shopTime: "7AM - 6AM", status: "Open now"),
         ShopModel(street: "409th Gle #340", image: "coffeeShop1", shopTime: "7PM - 6AM", status: "Open now")
     ]
+    
+    // navigation state
     
     var rightBarItemView: some View {
         return HStack(alignment: .center, spacing: 2) {

@@ -95,6 +95,9 @@ struct GiftVC: View {
             .padding([.trailing, .leading], 18)
         })
         .onAppear(perform: {onFirstAppear()})
+        .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
     }
 }
 

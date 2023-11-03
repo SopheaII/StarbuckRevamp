@@ -36,7 +36,7 @@ struct StarVC: View {
                     .padding([.top], 10)
 
             })
-            .padding([.trailing, .leading], 18)
+            .padding([.horizontal], 18)
             
         })
         .onAppear(perform: {onFirstAppear()})

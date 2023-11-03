@@ -23,6 +23,11 @@
 		BA9E1E912AF3317F000747EC /* yourOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1E902AF3317F000747EC /* yourOrderVC.swift */; };
 		BA9E1E932AF33E07000747EC /* YourOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1E922AF33E07000747EC /* YourOrderPresenter.swift */; };
 		BA9E1E962AF33EAE000747EC /* CommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1E952AF33EAE000747EC /* CommonModel.swift */; };
+		BA9E1E992AF37A51000747EC /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1E982AF37A51000747EC /* SuccessVC.swift */; };
+		BA9E1E9B2AF37CBC000747EC /* ItemFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1E9A2AF37CBC000747EC /* ItemFieldModel.swift */; };
+		BA9E1E9E2AF388E5000747EC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1E9D2AF388E5000747EC /* AppState.swift */; };
+		BA9E1EA42AF3AAA3000747EC /* CoffeeShopDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EA32AF3AAA3000747EC /* CoffeeShopDetailVC.swift */; };
+		BA9E1EA62AF48848000747EC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EA52AF48848000747EC /* CustomTextField.swift */; };
 		BACA05FA2AEA501B0029076D /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05F92AEA501B0029076D /* ShopModel.swift */; };
 		BACA05FD2AEB4B530029076D /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05FC2AEB4B530029076D /* OrderVC.swift */; };
 		BACA05FF2AEB6B190029076D /* ProductCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05FE2AEB6B190029076D /* ProductCategoryModel.swift */; };
@@ -72,6 +77,11 @@
 		BA9E1E902AF3317F000747EC /* yourOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourOrderVC.swift; sourceTree = "<group>"; };
 		BA9E1E922AF33E07000747EC /* YourOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourOrderPresenter.swift; sourceTree = "<group>"; };
 		BA9E1E952AF33EAE000747EC /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
+		BA9E1E982AF37A51000747EC /* SuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
+		BA9E1E9A2AF37CBC000747EC /* ItemFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFieldModel.swift; sourceTree = "<group>"; };
+		BA9E1E9D2AF388E5000747EC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BA9E1EA32AF3AAA3000747EC /* CoffeeShopDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopDetailVC.swift; sourceTree = "<group>"; };
+		BA9E1EA52AF48848000747EC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BACA05F92AEA501B0029076D /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
 		BACA05FC2AEB4B530029076D /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
 		BACA05FE2AEB6B190029076D /* ProductCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryModel.swift; sourceTree = "<group>"; };
@@ -120,6 +130,7 @@
 		BA02AC242AEF6631005EA728 /* Basket */ = {
 			isa = PBXGroup;
 			children = (
+				BA9E1E972AF37A35000747EC /* SuccessScreen */,
 				BA9E1E8F2AF3316B000747EC /* YourOrder */,
 				BA5EDD872AF202DA0019455F /* Components */,
 				BA02AC252AEF6640005EA728 /* BasketVC.swift */,
@@ -195,6 +206,7 @@
 		BA9E1E8E2AF24086000747EC /* CoffeeShop */ = {
 			isa = PBXGroup;
 			children = (
+				BA9E1E9F2AF3A643000747EC /* CoffeeShopDetail */,
 				BACA06022AEB8B420029076D /* CoffeeShopView.swift */,
 			);
 			path = CoffeeShop;
@@ -214,6 +226,38 @@
 			children = (
 			);
 			path = Order;
+			sourceTree = "<group>";
+		};
+		BA9E1E972AF37A35000747EC /* SuccessScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BA9E1E982AF37A51000747EC /* SuccessVC.swift */,
+			);
+			path = SuccessScreen;
+			sourceTree = "<group>";
+		};
+		BA9E1E9C2AF388BF000747EC /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				BA9E1E9D2AF388E5000747EC /* AppState.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		BA9E1E9F2AF3A643000747EC /* CoffeeShopDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BA9E1EA22AF3AAA3000747EC /* CoffeeShopDetail */,
+			);
+			path = CoffeeShopDetail;
+			sourceTree = "<group>";
+		};
+		BA9E1EA22AF3AAA3000747EC /* CoffeeShopDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BA9E1EA32AF3AAA3000747EC /* CoffeeShopDetailVC.swift */,
+			);
+			name = CoffeeShopDetail;
 			sourceTree = "<group>";
 		};
 		BACA05FB2AEB4B3B0029076D /* Orders */ = {
@@ -308,6 +352,7 @@
 				BACA05FE2AEB6B190029076D /* ProductCategoryModel.swift */,
 				BA02AC272AEF68B7005EA728 /* BasketModel.swift */,
 				BA9E1E952AF33EAE000747EC /* CommonModel.swift */,
+				BA9E1E9A2AF37CBC000747EC /* ItemFieldModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,6 +374,7 @@
 				BAF1A88D2AE9062E005C3240 /* UIImageExtention.swift */,
 				BAF1A88E2AE9062E005C3240 /* ViewExtension.swift */,
 				BA5EDD6D2AF0AD260019455F /* BackNavigate.swift */,
+				BA9E1EA52AF48848000747EC /* CustomTextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,6 +441,7 @@
 		BAF1A8812AE9045E005C3240 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BA9E1E9C2AF388BF000747EC /* Store */,
 				BAF1A8952AE90672005C3240 /* Colors.swift */,
 				BAF1A8972AE9F56F005C3240 /* Icons.swift */,
 			);
@@ -516,6 +563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9E1E9B2AF37CBC000747EC /* ItemFieldModel.swift in Sources */,
 				BA5EDD892AF202F00019455F /* BasketItemVC.swift in Sources */,
 				BA5EDD632AEF9B2B0019455F /* GiftVC.swift in Sources */,
 				BA9E1E912AF3317F000747EC /* yourOrderVC.swift in Sources */,
@@ -524,6 +572,7 @@
 				BACA06012AEB77CA0029076D /* ProductItemView.swift in Sources */,
 				BACA060F2AEBAECB0029076D /* CustomSegment.swift in Sources */,
 				BAF1A8982AE9F56F005C3240 /* Icons.swift in Sources */,
+				BA9E1E9E2AF388E5000747EC /* AppState.swift in Sources */,
 				BA9E1E962AF33EAE000747EC /* CommonModel.swift in Sources */,
 				BA5EDD6E2AF0AD260019455F /* BackNavigate.swift in Sources */,
 				BAF1A8942AE90644005C3240 /* NavBar.swift in Sources */,
@@ -538,14 +587,17 @@
 				BACA05FF2AEB6B190029076D /* ProductCategoryModel.swift in Sources */,
 				BA5EDD682AF093CD0019455F /* NavBarPresenter.swift in Sources */,
 				BAF1A8922AE9063C005C3240 /* HomeVC.swift in Sources */,
+				BA9E1EA62AF48848000747EC /* CustomTextField.swift in Sources */,
 				BA02AC232AEF5532005EA728 /* ScanToEarn.swift in Sources */,
 				BA9E1E932AF33E07000747EC /* YourOrderPresenter.swift in Sources */,
+				BA9E1EA42AF3AAA3000747EC /* CoffeeShopDetailVC.swift in Sources */,
 				BA5EDD712AF0BEAB0019455F /* ProductDetailVC.swift in Sources */,
 				BAF1A88F2AE9062E005C3240 /* UIImageExtention.swift in Sources */,
 				BAF1A8492AE902F1005C3240 /* StarbuckRevampApp.swift in Sources */,
 				BA02AC212AEF4EBD005EA728 /* PayWithStar.swift in Sources */,
 				BA02AC282AEF68B7005EA728 /* BasketModel.swift in Sources */,
 				BA02AC262AEF6640005EA728 /* BasketVC.swift in Sources */,
+				BA9E1E992AF37A51000747EC /* SuccessVC.swift in Sources */,
 				BAF1A8B52AEA26AA005C3240 /* ProductModel.swift in Sources */,
 				BACA06032AEB8B420029076D /* CoffeeShopView.swift in Sources */,
 				BACA05FD2AEB4B530029076D /* OrderVC.swift in Sources */,
