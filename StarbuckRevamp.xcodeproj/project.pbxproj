@@ -28,6 +28,14 @@
 		BA9E1E9E2AF388E5000747EC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1E9D2AF388E5000747EC /* AppState.swift */; };
 		BA9E1EA42AF3AAA3000747EC /* GiftDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EA32AF3AAA3000747EC /* GiftDetailVC.swift */; };
 		BA9E1EA62AF48848000747EC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EA52AF48848000747EC /* CustomTextField.swift */; };
+		BA9E1EAE2AF49EB7000747EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9E1EAD2AF49EB7000747EC /* WidgetKit.framework */; };
+		BA9E1EB02AF49EB7000747EC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9E1EAF2AF49EB7000747EC /* SwiftUI.framework */; };
+		BA9E1EB32AF49EB7000747EC /* MyWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EB22AF49EB7000747EC /* MyWidgetBundle.swift */; };
+		BA9E1EB52AF49EB7000747EC /* MyWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EB42AF49EB7000747EC /* MyWidgetLiveActivity.swift */; };
+		BA9E1EB72AF49EB7000747EC /* MyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EB62AF49EB7000747EC /* MyWidget.swift */; };
+		BA9E1EB92AF49EB7000747EC /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EB82AF49EB7000747EC /* AppIntent.swift */; };
+		BA9E1EBB2AF49EB8000747EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9E1EBA2AF49EB8000747EC /* Assets.xcassets */; };
+		BA9E1EBF2AF49EB8000747EC /* MyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BA9E1EAB2AF49EB6000747EC /* MyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BACA05FA2AEA501B0029076D /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05F92AEA501B0029076D /* ShopModel.swift */; };
 		BACA05FD2AEB4B530029076D /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05FC2AEB4B530029076D /* OrderVC.swift */; };
 		BACA05FF2AEB6B190029076D /* ProductCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05FE2AEB6B190029076D /* ProductCategoryModel.swift */; };
@@ -60,6 +68,30 @@
 		BAF1A8B52AEA26AA005C3240 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1A8B42AEA26AA005C3240 /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BA9E1EBD2AF49EB8000747EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAF1A83D2AE902F1005C3240 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA9E1EAA2AF49EB6000747EC;
+			remoteInfo = MyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA9E1EC32AF49EB8000747EC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BA9E1EBF2AF49EB8000747EC /* MyWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BA02AC202AEF4EBD005EA728 /* PayWithStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWithStar.swift; sourceTree = "<group>"; };
 		BA02AC222AEF5532005EA728 /* ScanToEarn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanToEarn.swift; sourceTree = "<group>"; };
@@ -82,6 +114,15 @@
 		BA9E1E9D2AF388E5000747EC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BA9E1EA32AF3AAA3000747EC /* GiftDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftDetailVC.swift; sourceTree = "<group>"; };
 		BA9E1EA52AF48848000747EC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		BA9E1EAB2AF49EB6000747EC /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA9E1EAD2AF49EB7000747EC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BA9E1EAF2AF49EB7000747EC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BA9E1EB22AF49EB7000747EC /* MyWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidgetBundle.swift; sourceTree = "<group>"; };
+		BA9E1EB42AF49EB7000747EC /* MyWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		BA9E1EB62AF49EB7000747EC /* MyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidget.swift; sourceTree = "<group>"; };
+		BA9E1EB82AF49EB7000747EC /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		BA9E1EBA2AF49EB8000747EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA9E1EBC2AF49EB8000747EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BACA05F92AEA501B0029076D /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
 		BACA05FC2AEB4B530029076D /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
 		BACA05FE2AEB6B190029076D /* ProductCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryModel.swift; sourceTree = "<group>"; };
@@ -117,6 +158,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BA9E1EA82AF49EB6000747EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9E1EB02AF49EB7000747EC /* SwiftUI.framework in Frameworks */,
+				BA9E1EAE2AF49EB7000747EC /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAF1A8422AE902F1005C3240 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +310,28 @@
 			name = CoffeeShopDetail;
 			sourceTree = "<group>";
 		};
+		BA9E1EAC2AF49EB7000747EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA9E1EAD2AF49EB7000747EC /* WidgetKit.framework */,
+				BA9E1EAF2AF49EB7000747EC /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA9E1EB12AF49EB7000747EC /* MyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				BA9E1EB22AF49EB7000747EC /* MyWidgetBundle.swift */,
+				BA9E1EB42AF49EB7000747EC /* MyWidgetLiveActivity.swift */,
+				BA9E1EB62AF49EB7000747EC /* MyWidget.swift */,
+				BA9E1EB82AF49EB7000747EC /* AppIntent.swift */,
+				BA9E1EBA2AF49EB8000747EC /* Assets.xcassets */,
+				BA9E1EBC2AF49EB8000747EC /* Info.plist */,
+			);
+			path = MyWidget;
+			sourceTree = "<group>";
+		};
 		BACA05FB2AEB4B3B0029076D /* Orders */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +386,8 @@
 			isa = PBXGroup;
 			children = (
 				BAF1A8472AE902F1005C3240 /* StarbuckRevamp */,
+				BA9E1EB12AF49EB7000747EC /* MyWidget */,
+				BA9E1EAC2AF49EB7000747EC /* Frameworks */,
 				BAF1A8462AE902F1005C3240 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -322,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				BAF1A8452AE902F1005C3240 /* StarbuckRevamp.app */,
+				BA9E1EAB2AF49EB6000747EC /* MyWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -485,6 +560,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BA9E1EAA2AF49EB6000747EC /* MyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA9E1EC02AF49EB8000747EC /* Build configuration list for PBXNativeTarget "MyWidgetExtension" */;
+			buildPhases = (
+				BA9E1EA72AF49EB6000747EC /* Sources */,
+				BA9E1EA82AF49EB6000747EC /* Frameworks */,
+				BA9E1EA92AF49EB6000747EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyWidgetExtension;
+			productName = MyWidgetExtension;
+			productReference = BA9E1EAB2AF49EB6000747EC /* MyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		BAF1A8442AE902F1005C3240 /* StarbuckRevamp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAF1A8532AE902F2005C3240 /* Build configuration list for PBXNativeTarget "StarbuckRevamp" */;
@@ -492,10 +584,12 @@
 				BAF1A8412AE902F1005C3240 /* Sources */,
 				BAF1A8422AE902F1005C3240 /* Frameworks */,
 				BAF1A8432AE902F1005C3240 /* Resources */,
+				BA9E1EC32AF49EB8000747EC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BA9E1EBE2AF49EB8000747EC /* PBXTargetDependency */,
 			);
 			name = StarbuckRevamp;
 			productName = StarbuckRevamp;
@@ -512,6 +606,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					BA9E1EAA2AF49EB6000747EC = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					BAF1A8442AE902F1005C3240 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -531,11 +628,20 @@
 			projectRoot = "";
 			targets = (
 				BAF1A8442AE902F1005C3240 /* StarbuckRevamp */,
+				BA9E1EAA2AF49EB6000747EC /* MyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BA9E1EA92AF49EB6000747EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9E1EBB2AF49EB8000747EC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAF1A8432AE902F1005C3240 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -559,6 +665,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BA9E1EA72AF49EB6000747EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9E1EB52AF49EB7000747EC /* MyWidgetLiveActivity.swift in Sources */,
+				BA9E1EB92AF49EB7000747EC /* AppIntent.swift in Sources */,
+				BA9E1EB32AF49EB7000747EC /* MyWidgetBundle.swift in Sources */,
+				BA9E1EB72AF49EB7000747EC /* MyWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAF1A8412AE902F1005C3240 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -606,7 +723,69 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BA9E1EBE2AF49EB8000747EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA9E1EAA2AF49EB6000747EC /* MyWidgetExtension */;
+			targetProxy = BA9E1EBD2AF49EB8000747EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BA9E1EC12AF49EB8000747EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JF5Q6HSWBK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = starbuck.revamp.StarbuckRevamp.MyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA9E1EC22AF49EB8000747EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JF5Q6HSWBK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = starbuck.revamp.StarbuckRevamp.MyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BAF1A8512AE902F2005C3240 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -729,6 +908,7 @@
 		BAF1A8542AE902F2005C3240 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -761,6 +941,7 @@
 		BAF1A8552AE902F2005C3240 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -793,6 +974,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BA9E1EC02AF49EB8000747EC /* Build configuration list for PBXNativeTarget "MyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA9E1EC12AF49EB8000747EC /* Debug */,
+				BA9E1EC22AF49EB8000747EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BAF1A8402AE902F1005C3240 /* Build configuration list for PBXProject "StarbuckRevamp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

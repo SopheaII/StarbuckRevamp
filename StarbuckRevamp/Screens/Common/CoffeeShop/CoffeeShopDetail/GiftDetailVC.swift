@@ -84,7 +84,8 @@ struct GiftDetailVC: View {
                                 .frame(height: 40)
                                 .padding([.horizontal], 10)
                                 .padding([.vertical], 3)
-                                .customTextField()
+                                .customFont(.NunitoRegular(size: 15))
+                                .customShadow()
                                 .padding(3)
                         }
                         VStack(alignment: .leading, spacing: 4) {
@@ -95,7 +96,8 @@ struct GiftDetailVC: View {
                                 .frame(height: 40)
                                 .padding([.horizontal], 10)
                                 .padding([.vertical], 3)
-                                .customTextField()
+                                .customFont(.NunitoRegular(size: 15))
+                                .customShadow()
                                 .padding(3)
                         }
                         
@@ -120,7 +122,8 @@ struct GiftDetailVC: View {
                                 .frame(height: 40)
                                 .padding([.horizontal], 10)
                                 .padding([.vertical], 3)
-                                .customTextField()
+                                .customFont(.NunitoRegular(size: 15))
+                                .customShadow()
                                 .padding(3)
                         }
                         VStack(alignment: .leading, spacing: 4) {
@@ -131,7 +134,8 @@ struct GiftDetailVC: View {
                                 .frame(height: 40)
                                 .padding([.horizontal], 10)
                                 .padding([.vertical], 3)
-                                .customTextField()
+                                .customFont(.NunitoRegular(size: 15))
+                                .customShadow()
                                 .padding(3)
                         }
                         

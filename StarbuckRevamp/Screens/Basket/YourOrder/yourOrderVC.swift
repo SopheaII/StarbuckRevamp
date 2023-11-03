@@ -240,6 +240,7 @@ struct yourOrderVC: View {
                             HStack(spacing: 15) {
                                 ForEach(shopData, id: \.self) { item in
                                     CoffeeShopView(item: item)
+                                        .customShadow()
                                 }
                             }
                         })

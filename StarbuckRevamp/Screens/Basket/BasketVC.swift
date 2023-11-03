@@ -63,6 +63,7 @@ struct BasketVC: View {
                                         .customHeader(backTitle: "Baskset")
                                     , label: {
                                         BasketItem(index: index, presenter: presenter, item: item)
+                                            .customShadow(shadowRadius: 14)
                                     }
                                 )
                                 .buttonStyle(PlainButtonStyle())

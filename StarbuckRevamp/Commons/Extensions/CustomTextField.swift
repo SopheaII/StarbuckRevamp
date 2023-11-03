@@ -8,18 +8,19 @@
 import SwiftUI
 
 extension View {
-    func customTextField() -> some View {
-        self.background(
-            Rectangle()
-                .fill(Color.white)
-                .cornerRadius(8)
-                .shadow(
-                    color: Color.gray.opacity(0.4),
-                    radius: 4,
-                    x: 0,
-                    y: 0
-                )
-        )
-        .customFont(.NunitoRegular(size: 15))
+    func customShadow(shadowRadius: CGFloat = 8) -> some View {
+        self
+            .background(
+                Rectangle()
+                    .fill(Color.white)
+                    .cornerRadius(shadowRadius)
+                    .shadow(
+                        color: Color.gray.opacity(0.2),
+                        radius: 3,
+                        x: 0,
+                        y: 0
+                    )
+                    .padding(2)
+            )
     }
 }

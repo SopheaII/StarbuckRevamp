@@ -112,6 +112,7 @@ struct OrderVC: View {
                                     .background(cgIdSelected == item.id ? Colors.softBlueBg.value : Color.white)
                                     .foregroundColor(cgIdSelected == item.id ? Colors.mainColor.value : Color.black)
                                     .cornerRadius(12)
+                                    .customShadow(shadowRadius: 12)
                             }
                         }
                     }
@@ -141,6 +142,7 @@ struct OrderVC: View {
                                             .customHeader(backTitle: "Hot coffees")
                                         , label: {
                                             ProductItemView(item: item)
+                                                .customShadow(shadowRadius: 14)
                                         }
                                     )
                                     .buttonStyle(PlainButtonStyle())
@@ -171,6 +173,7 @@ struct OrderVC: View {
                                             .customHeader(backTitle: "Hot teas")
                                         , label: {
                                             ProductItemView(item: item)
+                                                .customShadow(shadowRadius: 14)
                                         }
                                     )
                                     .buttonStyle(PlainButtonStyle())
@@ -201,6 +204,7 @@ struct OrderVC: View {
                                             .customHeader(backTitle: "Hot drinks")
                                         , label: {
                                             ProductItemView(item: item)
+                                                .customShadow(shadowRadius: 14)
                                         }
                                     )
                                     .buttonStyle(PlainButtonStyle())

@@ -47,6 +47,7 @@ struct GiftVC: View {
                     .padding(8)
                     .background(.white)
                     .cornerRadius(12)
+                    .customShadow(shadowRadius: 12)
                     Button(action: {}) {
                         ZStack{
                             Color.white
@@ -55,6 +56,8 @@ struct GiftVC: View {
                                 .padding(2)
                                 .background(Colors.mainColor.value)
                                 .cornerRadius(12)
+                                .padding(2.5)
+                                .customShadow(shadowRadius: 12)
                             Image(Icons.icFilter.value)
                                 .resizable()
                                 .frame(width: 25, height: 25)
@@ -76,6 +79,7 @@ struct GiftVC: View {
                                     .background(cgIdSelected == item.id ? Colors.softBlueBg.value : Color.white)
                                     .foregroundColor(cgIdSelected == item.id ? Colors.mainColor.value : Color.black)
                                     .cornerRadius(12)
+                                    .customShadow(shadowRadius: 12)
                             }
                         }
                     }

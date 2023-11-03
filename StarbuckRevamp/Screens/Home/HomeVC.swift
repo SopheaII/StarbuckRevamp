@@ -103,6 +103,8 @@ struct HomeVC: View {
                                     .frame(width: 130, height: 50)
                                     .background(Colors.mainColor.value)
                                     .cornerRadius(10)
+                                    .padding(2.5)
+                                    .customShadow(shadowRadius: 10)
                                 Text("Buy with stars")
                                     .customFont(.NunitoRegular(size: 16))
                                     .foregroundColor(.white)
@@ -116,6 +118,8 @@ struct HomeVC: View {
                                     .padding(2)
                                     .background(Colors.mainColor.value)
                                     .cornerRadius(10)
+                                    .padding(2.5)
+                                    .customShadow(shadowRadius: 10)
                                 Image(Icons.icQR.value)
                                     .resizable()
                                     .frame(width: 36, height: 36)
@@ -151,6 +155,7 @@ struct HomeVC: View {
                                                 .scaledToFit()
                                                 .frame(height: 200)
                                                 .cornerRadius(15)
+                                                .customShadow(shadowRadius: 15)
                                         }
                                     )
                                     .buttonStyle(PlainButtonStyle())
@@ -182,6 +187,7 @@ struct HomeVC: View {
                                             .customHeader(backTitle: "Current coffees", rightView: rightBarItemView)
                                         , label: {
                                             ProductItemView(item: item)
+                                                .customShadow(shadowRadius: 14)
                                         }
                                     )
                                     .buttonStyle(PlainButtonStyle())
@@ -208,6 +214,7 @@ struct HomeVC: View {
                             HStack(spacing: 15) {
                                 ForEach(shopData, id: \.self) { item in
                                     CoffeeShopView(item: item)
+                                        .customShadow(shadowRadius: 12)
                                 }
                             }
                         })
