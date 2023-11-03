@@ -21,6 +21,9 @@ struct GiftVC: View {
     @State var searchText = ""
     @State var cgIdSelected = 1
     
+    // Navigate state
+    @State var isNavigateToShopDetail = false
+    
     func onFirstAppear() {
     }
     
@@ -82,11 +85,18 @@ struct GiftVC: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack{
                         ForEach(giftCards, id: \.self){ item in
-                            Image(item)
-                                .resizable()
-                                .frame(height: 200)
-                                .scaledToFit()
-                                .cornerRadius(12)
+                            Button(action: {isNavigateToShopDetail = true}) {
+                                Image(item)
+                                    .resizable()
+                                    .frame(height: 200)
+                                    .scaledToFit()
+                                    .cornerRadius(12)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .navigationDestination(isPresented: $isNavigateToShopDetail, destination: {
+                                GiftDetailVC()
+                                    .customHeader(backTitle: "Gift cards", title: "Birthday card")
+                            })
                         }
                     }
                 }

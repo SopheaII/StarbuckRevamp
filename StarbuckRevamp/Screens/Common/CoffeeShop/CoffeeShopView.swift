@@ -10,9 +10,6 @@ import SwiftUI
 struct CoffeeShopView: View {
     var item: ShopModel
     
-    // Navigate state
-    @State var isNavigateToShopDetail = false
-    
     var body: some View {
         HStack(alignment: .top, spacing: 8){
             Image(item.image)
@@ -40,7 +37,7 @@ struct CoffeeShopView: View {
                         .customFont(.NunitoMedium(size: 14))
                         .foregroundColor(Colors.mainColor.value)
                     Spacer()
-                    Button(action: {isNavigateToShopDetail = true}) {
+                    Button(action: {}) {
                         Text("Check out")
                             .customFont(.NunitoMedium(size: 15))
                             .padding(5)
@@ -48,10 +45,6 @@ struct CoffeeShopView: View {
                             .background(Colors.mainColor.value)
                             .cornerRadius(5)
                     }
-                    .navigationDestination(isPresented: $isNavigateToShopDetail, destination: {
-                        CoffeeShopDetailVC()
-                            .customHeader(backTitle: "Gift cards", title: "Birthday card")
-                    })
                 }
             }
         }

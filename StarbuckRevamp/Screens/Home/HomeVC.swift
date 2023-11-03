@@ -36,7 +36,7 @@ struct HomeVC: View {
         ShopModel(street: "409th Gle #340", image: "coffeeShop1", shopTime: "7PM - 6AM", status: "Open now")
     ]
     
-    // navigation state
+    // Navigate state
     
     var rightBarItemView: some View {
         return HStack(alignment: .center, spacing: 2) {

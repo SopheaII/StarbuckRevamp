@@ -26,7 +26,7 @@
 		BA9E1E992AF37A51000747EC /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1E982AF37A51000747EC /* SuccessVC.swift */; };
 		BA9E1E9B2AF37CBC000747EC /* ItemFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1E9A2AF37CBC000747EC /* ItemFieldModel.swift */; };
 		BA9E1E9E2AF388E5000747EC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1E9D2AF388E5000747EC /* AppState.swift */; };
-		BA9E1EA42AF3AAA3000747EC /* CoffeeShopDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EA32AF3AAA3000747EC /* CoffeeShopDetailVC.swift */; };
+		BA9E1EA42AF3AAA3000747EC /* GiftDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EA32AF3AAA3000747EC /* GiftDetailVC.swift */; };
 		BA9E1EA62AF48848000747EC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E1EA52AF48848000747EC /* CustomTextField.swift */; };
 		BACA05FA2AEA501B0029076D /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05F92AEA501B0029076D /* ShopModel.swift */; };
 		BACA05FD2AEB4B530029076D /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA05FC2AEB4B530029076D /* OrderVC.swift */; };
@@ -80,7 +80,7 @@
 		BA9E1E982AF37A51000747EC /* SuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
 		BA9E1E9A2AF37CBC000747EC /* ItemFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFieldModel.swift; sourceTree = "<group>"; };
 		BA9E1E9D2AF388E5000747EC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		BA9E1EA32AF3AAA3000747EC /* CoffeeShopDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopDetailVC.swift; sourceTree = "<group>"; };
+		BA9E1EA32AF3AAA3000747EC /* GiftDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftDetailVC.swift; sourceTree = "<group>"; };
 		BA9E1EA52AF48848000747EC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BACA05F92AEA501B0029076D /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
 		BACA05FC2AEB4B530029076D /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 		BA9E1EA22AF3AAA3000747EC /* CoffeeShopDetail */ = {
 			isa = PBXGroup;
 			children = (
-				BA9E1EA32AF3AAA3000747EC /* CoffeeShopDetailVC.swift */,
+				BA9E1EA32AF3AAA3000747EC /* GiftDetailVC.swift */,
 			);
 			name = CoffeeShopDetail;
 			sourceTree = "<group>";
@@ -590,7 +590,7 @@
 				BA9E1EA62AF48848000747EC /* CustomTextField.swift in Sources */,
 				BA02AC232AEF5532005EA728 /* ScanToEarn.swift in Sources */,
 				BA9E1E932AF33E07000747EC /* YourOrderPresenter.swift in Sources */,
-				BA9E1EA42AF3AAA3000747EC /* CoffeeShopDetailVC.swift in Sources */,
+				BA9E1EA42AF3AAA3000747EC /* GiftDetailVC.swift in Sources */,
 				BA5EDD712AF0BEAB0019455F /* ProductDetailVC.swift in Sources */,
 				BAF1A88F2AE9062E005C3240 /* UIImageExtention.swift in Sources */,
 				BAF1A8492AE902F1005C3240 /* StarbuckRevampApp.swift in Sources */,

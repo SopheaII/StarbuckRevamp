@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CoffeeShopDetailVC: View {
+struct GiftDetailVC: View {
     let amountSet = ["$10", "$20", "$50", "$100"]
     @State var customAmount = ""
     @FocusState private var isCustomFocusAmount: Bool?
@@ -26,7 +26,7 @@ struct CoffeeShopDetailVC: View {
             
             VStack(alignment: .leading, spacing: 15, content: {
                 // MARK: Header
-                Image("coffeeShop1")
+                Image(Icons.giftImage.value)
                     .resizable()
                     .frame(maxWidth: .infinity)
                     .frame(height: 200)
@@ -163,5 +163,5 @@ struct CoffeeShopDetailVC: View {
 }
 
 #Preview {
-    CoffeeShopDetailVC()
+    GiftDetailVC()
 }
