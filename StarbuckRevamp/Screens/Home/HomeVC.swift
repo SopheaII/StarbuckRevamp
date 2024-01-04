@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct HomeVC: View {
+    @State private var isGiftDrag = false
+    @State private var animate = false
+    @State private var selectedProduct: ProductModel = ProductModel(name: "", image: "", isFavorite: false)
+    @State private var isDetailViewActive: Bool = false
+    
     let productData = [
         ProductModel(name: "Veranda blend", image: "coffee1", isFavorite: true, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
             CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
@@ -22,21 +27,24 @@ struct HomeVC: View {
             CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
             CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
         ], addIns: "", flavors: "", price: "$3.78", location: "108th Ave Ne #140", ccal: 5),
-        
-        ProductModel(name: "Veranda", image: "coffee1", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+        ProductModel(name: "Everything & Cheddar Bagel", image: "coffee2", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
             CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
             CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
             CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
             CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
-        ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5),
+        ], addIns: "", flavors: "", price: "$3.78", location: "108th Ave Ne #140", ccal: 5),
     ]
     
     let shopData = [
         ShopModel(street: "108th Ave Ne #140", image: "coffeeShop1", shopTime: "7AM - 6AM", status: "Open now"),
         ShopModel(street: "409th Gle #340", image: "coffeeShop1", shopTime: "7PM - 6AM", status: "Open now")
     ]
-    
-    // Navigate state
+    let giftData = [
+        GiftModel(id: 1, title: "", imageURL: Icons.giftImage.value),
+        GiftModel(id: 2, title: "", imageURL: Icons.giftImage.value),
+        GiftModel(id: 3, title: "", imageURL: Icons.giftImage.value),
+        GiftModel(id: 4, title: "", imageURL: Icons.giftImage.value)
+    ]
     
     var rightBarItemView: some View {
         return HStack(alignment: .center, spacing: 2) {
@@ -56,7 +64,7 @@ struct HomeVC: View {
     var body: some View {
         ZStack(alignment: .top, content: {
             Colors.appBg.value.ignoresSafeArea()
-            
+            ParticleSystem()
             VStack(alignment: .leading, spacing: 0, content: {
                 
                 // MARK: Header
@@ -80,6 +88,15 @@ struct HomeVC: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     }
                 }
+//                Image(systemName: animate ? "checkmark.circle" : "touchid")
+//                    .font(.system(size: 100))
+//                    .symbolRenderingMode(.palette)
+//                    .symbolEffect(.bounce, value: animate)
+//                    .contentTransition(.symbolEffect(.replace))
+//                    .foregroundStyle(.purple, .gray)
+//                    .onTapGesture {
+//                        animate.toggle()
+//                    }
                 
                 ScrollView(.vertical, showsIndicators: false, content: {
                     // MARK: Top banner
@@ -145,20 +162,38 @@ struct HomeVC: View {
                         }
                         
                         ScrollView(.horizontal, showsIndicators: false, content: {
-                            HStack(spacing: 15) {
-                                ForEach(1...2, id: \.self) {_ in
-                                    NavigationLink(
-                                        destination: GiftVC().customHeader(backTitle: "Home", title: "Gift cards")
-                                        , label: {
-                                            Image(Icons.giftImage.value)
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(height: 200)
-                                                .cornerRadius(15)
-                                                .customShadow(shadowRadius: 15)
+                            ScrollViewReader { scrollViewProxy in
+                                HStack(spacing: 15) {
+                                    ForEach(giftData.indices, id: \.self) {index in
+                                        NavigationLink(
+                                            destination: GiftVC().customHeader(backTitle: "Home", title: "Gift cards")
+                                            , label: {
+                                                Image(giftData[index].imageURL)
+                                                    .resizable()
+                                                    .frame(width: 280, height: 200)
+                                                    .scaledToFit()
+                                                    .cornerRadius(15)
+                                                    .customShadow(shadowRadius: 15)
+                                                    .scaleEffect(isGiftDrag ? 0.94 : 1)
+                                            }
+                                        )
+                                        .buttonStyle(PlainButtonStyle())
+                                        .id(index)
+                                    }
+                                }
+                                .background {
+                                    ScrollDetector { offset in
+                                    } onDraggingEnd: { offset, velocity in
+                                        let scrollId = Int(round(abs(offset)/287.5))
+                                        withAnimation {
+                                            isGiftDrag = false
+                                            scrollViewProxy.scrollTo(scrollId)
                                         }
-                                    )
-                                    .buttonStyle(PlainButtonStyle())
+                                    } onDragBenin: {
+                                        withAnimation{
+                                            isGiftDrag = true
+                                        }
+                                    }
                                 }
                             }
                         })
@@ -182,17 +217,20 @@ struct HomeVC: View {
                         ScrollView(.horizontal, showsIndicators: false, content: {
                             HStack(spacing: 10) {
                                 ForEach(productData, id: \.self) { item in
-                                    NavigationLink(
-                                        destination: ProductDetailVC(productData: item)
-                                            .customHeader(backTitle: "Current coffees", rightView: rightBarItemView)
-                                        , label: {
-                                            ProductItemView(item: item)
-                                                .customShadow(shadowRadius: 14)
-                                        }
-                                    )
+                                    Button(action: {
+                                        selectedProduct = item
+                                        isDetailViewActive = true
+                                    }) {
+                                        ProductItemView(item: item)
+                                            .customShadow(shadowRadius: 14)
+                                    }
                                     .buttonStyle(PlainButtonStyle())
                                 }
                             }
+                            .navigationDestination(isPresented: $isDetailViewActive, destination: {
+                                ProductDetailVC(productData: selectedProduct)
+                                    .customHeader(backTitle: "Current coffees", rightView: rightBarItemView)
+                            })
                         })
                     }
                     .padding([.top], 20)

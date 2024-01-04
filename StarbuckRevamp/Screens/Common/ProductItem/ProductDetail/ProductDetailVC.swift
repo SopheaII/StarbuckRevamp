@@ -202,11 +202,11 @@ struct ProductDetailVC: View {
                 Spacer()
                 
                 // MARK: Button
-                HStack() {
+                HStack(alignment: .center, spacing: 20) {
                     Text("\(productData.price)")
                         .customFont(.NunitoExtraBold(size: 30))
                         .foregroundColor(Colors.mainColor.value)
-                    Spacer()
+//                    Spacer()
                     Button(action: {}) {
                         ZStack{
                             Text("Add to basket")
@@ -214,7 +214,7 @@ struct ProductDetailVC: View {
                                 .foregroundStyle(.white)
                                 .padding(15)
                                 .frame(maxWidth: .infinity, alignment: .center)
-                                .frame(width: 210)
+//                                .frame(width: 210)
                                 .background(Colors.mainColor.value)
                                 .cornerRadius(10)
                         }

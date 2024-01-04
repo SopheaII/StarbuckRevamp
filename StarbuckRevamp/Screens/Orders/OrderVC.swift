@@ -29,6 +29,36 @@ struct OrderVC: View {
             CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
             CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
         ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5),
+        ProductModel(name: "Veranda", image: "coffee1", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5),
+        ProductModel(name: "Veranda", image: "coffee1", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5),
+        ProductModel(name: "Veranda", image: "coffee1", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5),
+        ProductModel(name: "Veranda", image: "coffee1", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5),
+        ProductModel(name: "Veranda", image: "coffee1", isFavorite: false, ingredient: "Brewed Decaf Coffee", coffeeSizes: [
+            CoffeeSize(size: "sz1", label: "Short", des: "8(fl oz)", image: ""),
+            CoffeeSize(size: "sz2", label: "Tall", des: "12(fl oz)", image: ""),
+            CoffeeSize(size: "sz3", label: "Grande", des: "16(fl oz)", image: ""),
+            CoffeeSize(size: "sz4", label: "Venti", des: "20(fl oz)", image: "")
+        ], addIns: "", flavors: "", price: "$2.78", location: "108th Ave Ne #140", ccal: 5),
     ]
     
     let productCategory = [
@@ -42,6 +72,10 @@ struct OrderVC: View {
     
     @State var searchText = ""
     @State var cgIdSelected = 0
+    @State private var selectedProduct: ProductModel = ProductModel(name: "", image: "", isFavorite: false)
+    @State private var isDetailViewCoffeActive: Bool = false
+    @State private var isDetailViewTeasActive: Bool = false
+    @State private var isDetailViewDrinkActive: Bool = false
     func onFirstAppear() {
         cgIdSelected = productCategory.first!.id
     }
@@ -137,17 +171,20 @@ struct OrderVC: View {
                         ScrollView(.horizontal, showsIndicators: false, content: {
                             HStack(spacing: 10) {
                                 ForEach(productData, id: \.self) { item in
-                                    NavigationLink(
-                                        destination: ProductDetailVC(productData: item)
-                                            .customHeader(backTitle: "Hot coffees")
-                                        , label: {
-                                            ProductItemView(item: item)
-                                                .customShadow(shadowRadius: 14)
-                                        }
-                                    )
+                                    Button(action: {
+                                        selectedProduct = item
+                                        isDetailViewCoffeActive = true
+                                    }) {
+                                        ProductItemView(item: item)
+                                            .customShadow(shadowRadius: 14)
+                                    }
                                     .buttonStyle(PlainButtonStyle())
                                 }
                             }
+                            .navigationDestination(isPresented: $isDetailViewCoffeActive, destination: {
+                                ProductDetailVC(productData: selectedProduct)
+                                    .customHeader(backTitle: "Hot coffees")
+                            })
                         })
                     }
                     .padding([.top], 20)
@@ -168,17 +205,20 @@ struct OrderVC: View {
                         ScrollView(.horizontal, showsIndicators: false, content: {
                             HStack(spacing: 10) {
                                 ForEach(productData, id: \.self) { item in
-                                    NavigationLink(
-                                        destination: ProductDetailVC(productData: item)
-                                            .customHeader(backTitle: "Hot teas")
-                                        , label: {
-                                            ProductItemView(item: item)
-                                                .customShadow(shadowRadius: 14)
-                                        }
-                                    )
+                                    Button(action: {
+                                        selectedProduct = item
+                                        isDetailViewTeasActive = true
+                                    }) {
+                                        ProductItemView(item: item)
+                                            .customShadow(shadowRadius: 14)
+                                    }
                                     .buttonStyle(PlainButtonStyle())
                                 }
                             }
+                            .navigationDestination(isPresented: $isDetailViewTeasActive, destination: {
+                                ProductDetailVC(productData: selectedProduct)
+                                    .customHeader(backTitle: "Hot teas")
+                            })
                         })
                     }
                     .padding([.top], 20)
@@ -199,17 +239,20 @@ struct OrderVC: View {
                         ScrollView(.horizontal, showsIndicators: false, content: {
                             HStack(spacing: 10) {
                                 ForEach(productData, id: \.self) { item in
-                                    NavigationLink(
-                                        destination: ProductDetailVC(productData: item)
-                                            .customHeader(backTitle: "Hot drinks")
-                                        , label: {
-                                            ProductItemView(item: item)
-                                                .customShadow(shadowRadius: 14)
-                                        }
-                                    )
+                                    Button(action: {
+                                        selectedProduct = item
+                                        isDetailViewDrinkActive = true
+                                    }) {
+                                        ProductItemView(item: item)
+                                            .customShadow(shadowRadius: 14)
+                                    }
                                     .buttonStyle(PlainButtonStyle())
                                 }
                             }
+                            .navigationDestination(isPresented: $isDetailViewDrinkActive, destination: {
+                                ProductDetailVC(productData: selectedProduct)
+                                    .customHeader(backTitle: "Hot drinks")
+                            })
                         })
                     }
                     .padding([.top], 20)

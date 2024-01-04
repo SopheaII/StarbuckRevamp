@@ -26,7 +26,7 @@ struct StarbuckRevampApp: App {
                     NavBar().navigationBarBackButtonHidden(true).navigationBarHidden(true)
                 }
             }
-            .navigationViewStyle(.stack)
+            .navigationViewStyle(StackNavigationViewStyle())
             .environmentObject(appSate)
         }
     }

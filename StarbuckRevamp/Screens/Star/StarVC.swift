@@ -30,9 +30,9 @@ struct StarVC: View {
                     SegmentView(id: 0, title: "Pay with stars", content: PayWithStar()),
                     SegmentView(id: 1, title: "Scan to earn", content: ScanToEarn()),
                 ])
-                    .onChange(of: segmentIndex, {
-                        print("Segment selected \(segmentIndex)")
-                    })
+//                    .onChange(of: segmentIndex, {
+//                        print("Segment selected \(segmentIndex)")
+//                    })
                     .padding([.top], 10)
 
             })

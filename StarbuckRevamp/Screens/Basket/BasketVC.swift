@@ -32,6 +32,8 @@ struct BasketVC: View {
     
     @State var isOrderActive = false
     @EnvironmentObject var appState: AppState
+    @State private var selectedProduct: ProductModel = ProductModel(name: "", image: "", isFavorite: false)
+    @State private var isDetailViewActive: Bool = false
     
     func onFirstAppear() {
         self.presenter.updateQuantityCb = self.updateQuantity
@@ -58,17 +60,20 @@ struct BasketVC: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading) {
                             ForEach(Array(self.productData.enumerated()), id: \.offset) { index, item in
-                                NavigationLink(
-                                    destination: ProductDetailVC(productData: item.product)
-                                        .customHeader(backTitle: "Baskset")
-                                    , label: {
-                                        BasketItem(index: index, presenter: presenter, item: item)
-                                            .customShadow(shadowRadius: 14)
-                                    }
-                                )
+                                Button(action: {
+                                    selectedProduct = item.product
+                                    isDetailViewActive = true
+                                }) {
+                                    BasketItem(index: index, presenter: presenter, item: item)
+                                        .customShadow(shadowRadius: 14)
+                                }
                                 .buttonStyle(PlainButtonStyle())
                         }
                     }
+                    .navigationDestination(isPresented: $isDetailViewActive, destination: {
+                        ProductDetailVC(productData: selectedProduct)
+                            .customHeader(backTitle: "Basket")
+                    })
                 }
                 .padding([.top], 15)
                 
